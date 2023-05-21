@@ -1,0 +1,24 @@
+[
+  {
+    "livia": {
+        "name": "Lívia Gomes",
+        "personalDetails": {
+            "phone": "321654987",
+            "email": "liviapriscilla@hotmail.com",
+            "address": "Lisboa"
+        },
+        "socials": {
+            "linkedin": "lalalal",
+            "github": "lalalal",
+            "instagram": "lalalal",
+            "stackoverflow": "lalalal"
+        }
+
+
+    },
+    "thais": {},
+    "wes": {},
+
+    "dyogo": {}
+  }
+]
