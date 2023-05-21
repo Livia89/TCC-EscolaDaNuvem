@@ -1,20 +1,44 @@
 [
   {
     "livia": {
-        "name": "Lívia Gomes",
-        "personalDetails": {
-            "phone": "321654987",
-            "email": "liviapriscilla@hotmail.com",
-            "address": "Lisboa"
+      "name": "Lívia Gomes",
+      "personalDetails": {
+        "phone": "321654987",
+        "email": "liviapriscilla@hotmail.com",
+        "address": "Lisboa"
+      },
+      "socials": {
+        "linkedin": "lalalal",
+        "github": "lalalal",
+        "instagram": "lalalal",
+        "stackoverflow": "lalalal"
+      },
+      "workExperience": [
+        {
+          "entity": {
+            "date": "",
+            "name": "",
+            "location": "",
+            "details": {}
+          }
         },
-        "socials": {
-            "linkedin": "lalalal",
-            "github": "lalalal",
-            "instagram": "lalalal",
-            "stackoverflow": "lalalal"
+        {
+          "entity": {
+            "date": "",
+            "name": "",
+            "location": "",
+            "details": {}
+          }
+        },
+        {
+          "entity": {
+            "date": "",
+            "name": "",
+            "location": "",
+            "details": {}
+          }
         }
-
-
+      ]
     },
     "thais": {},
     "wes": {},
