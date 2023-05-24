@@ -2,43 +2,42 @@
   {
     "livia": {
       "name": "Lívia Gomes",
-      "personalDetails": {
-        "phone": "321654987",
-        "email": "liviapriscilla@hotmail.com",
-        "address": "Lisboa"
-      },
+      "phone": "321654987",
+      "email": "liviapriscilla@hotmail.com",
+      "address": "Lisboa",
+      
       "socials": {
         "linkedin": "lalalal",
         "github": "lalalal",
         "instagram": "lalalal",
         "stackoverflow": "lalalal"
       },
-      "workExperience": [
+      "Work-Experience": [
         {
-          "entity": {
+          "company": "",
             "date": "",
-            "name": "",
             "location": "",
             "details": {}
-          }
         },
         {
-          "entity": {
+          "company": "",
             "date": "",
-            "name": "",
             "location": "",
             "details": {}
-          }
         },
         {
-          "entity": {
+          "company": "",
             "date": "",
-            "name": "",
             "location": "",
             "details": {}
-          }
-        }
-      ]
+        }        
+      ],
+      "Education": [{
+        "date": "",
+        "name": "",
+        "location": "",
+        "level": "" 
+      }]
     },
     "thais": {},
     "wes": {},
