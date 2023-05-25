@@ -53,7 +53,7 @@ function App() {
   return (
     <> {/*translate-x-[-0px]  transform*/ }
       <div className={`w-[${screenSize}px] transition-all flex`}>
-        {users.length && users?.map((user: Users, index: number) => {
+        {users.length && users?.map((user: Users) => {
 
           return (
             <div className={`w-screen`} id={`${user.id}`}>
