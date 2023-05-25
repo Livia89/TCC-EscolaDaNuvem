@@ -7,7 +7,7 @@
 function Title(props: TitleProps ): React.ReactElement {
     const {title, color} = props
   return (
-    <div className=" relative ">
+    <div className=" relative my-4 ">
       <div className="font-cormorant text-xl uppercase font-semibold tracking-widest z-50 relative ">
         <span className="bg-white"> {title} </span>
       </div>
