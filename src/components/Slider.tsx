@@ -1,20 +1,39 @@
-
 import { useState } from "react";
 import CurriculumVitae from "./CurriculumVitae";
+
+import { SidemenuData, UsersData } from "../share/interfaces";
+
+import ImageSection from "./ImageSection";
 import Sidemenu from "./Sidemenu";
-import { SidemenuData } from "../share/interfaces";
-interface sidemenuProps{
+
+interface sidemenuProps {
+  data: UsersData;
   fixed?: boolean;
 }
 
-function SliderPage(props: sidemenuProps): React.ReactElement{
+function SliderPage(props: sidemenuProps): React.ReactElement {
+  const { data, fixed } = props;
+
   const [sidebarMenu, setSideBarMenu] = useState<SidemenuData>();
   const [curriculumVitae, setCurriculumVitae] = useState<SidemenuData>();
+ 
   return (
-    <div className="grid grid-cols-2 w-screen">
-      <CurriculumVitae />
-      <Sidemenu fixed={props.fixed} />
-    </div>
+    <>
+      <div className="lg:grid lg:grid-cols-2 bg-[#8ea69b] flex flex-col-reverse w-screen">
+      
+        <CurriculumVitae data={data} />
+       <ImageSection
+          {...{
+            id: data.name,
+            socials: data.socials,
+            fixed: fixed,
+          }}
+        />
+      
+       </div>
+    
+      
+    </>
   );
 }
 

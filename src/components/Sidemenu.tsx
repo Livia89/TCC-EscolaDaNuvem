@@ -1,50 +1,41 @@
 // image url
 // social midias
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import liviaImage from "../assets/livia.jpg";
+import { Users, UsersData } from "../share/interfaces";
 
-import { 
-  faLinkedin,
-  faStackOverflow,
-  faInstagram,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
-
-function Sidemenu() {
+function Sidemenu({...linkId}): React.ReactElement {
+  
+  /* const {name} = {...linkId}; */
+  
+ 
   return (
-    <div className="border p-8 bg-[#8ea69b] flex flex-col w-full items-center h-screen">
-      <img
-        src={liviaImage}
-        className="rounded-full sm:mt-28 shadow "
-        height={300}
-        width={300}
-      />
-
-      <div className="my-6 space-x-4">
-        <FontAwesomeIcon
-          className="bg-white p-2 rounded-full"
-          size={"lg"}
-          icon={faLinkedin}
-        />
-        <FontAwesomeIcon
-          className="bg-white p-2 rounded-full"
-          size={"lg"}
-          icon={faStackOverflow}
-        />
-        <FontAwesomeIcon
-          className="bg-white p-2 rounded-full"
-          size={"lg"}
-          icon={faInstagram}
-        />
-        <FontAwesomeIcon
-          className="bg-white p-2 rounded-full"
-          size={"lg"}
-          icon={faGithub}
-        />
+    <>
+      <div className="flex flex-col fixed top-0 px-2 border-l-2 bottom-0 bg-slate-950 right-0 ">
+        <div>
+          <a href="#livia3" className="text-sm">
+            <img
+              id="livia3"
+              src={liviaImage}
+              className="rounded-full hover:scale-50 transition-all sm:mt-5 shadow mx-auto"
+              height={50}
+              width={50}
+            />
+            <span className="text-white text-sm ">Joaquina</span>
+          </a>
+        </div>
+        <div>
+          <a href="#livia1">
+            <img
+              src={liviaImage}
+              className="rounded-full hover:scale-50 transition-all sm:mt-5 shadow mx-auto"
+              height={50}
+              width={50}
+            />
+          </a>
+          <span className="text-white text-sm ">Francisca</span>
+        </div>
       </div>
-
-    
-    </div>
+    </>
   );
 }
 
