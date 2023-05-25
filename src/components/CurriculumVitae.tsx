@@ -10,94 +10,97 @@ Education
 Contacts 
 */
 
+import { UsersData } from "../share/interfaces";
 import Title from "./SectionTitle";
+interface CVProps {
+  data: UsersData;
+}
+function CurriculumVitae({ data }: CVProps): React.ReactElement {
+  const {
+    name,
+    phone,
+    job,
+    email,
+    address,
+    education,
+    workExperience,
+    skills,
+  } = {
+    ...data,
+  };
 
-function CurriculumVitae() {
   return (
-    <div className="p-8">
+    <div className="p-8 bg-white ">
       <div className="mb-8">
         <button className="bg-[#140707] hover:bg-gray-100 hover:shadow hover:text-[#140707] text-white px-6 py-3 transition-colors ease ">
           Download CV
         </button>
       </div>
+
       <div className="flex justify-center flex-col items-center transform  transition-all scroll-smooth">
         <div className="my-16 ">
           <div className="my-6">
-            <h1 className="text-7xl font-cormorant font-bold">Lívia Gomes</h1>
-            <h2 className="text-2xl font-light"> Front End Developer </h2>
+            <h1 className="text-7xl font-cormorant font-bold">{name}</h1>
+            <h2 className="text-2xl font-light"> {job} </h2>
           </div>
           <div className="flex flex-col justify-start w-full">
             <span>
-              <b>Phone: </b> (+351) 9275-46995
+              <b>Phone: </b> {phone}
             </span>
             <span>
-              <b>Email: </b> liviapriscilla1989@gmail.com
+              <b>Email: </b> {email}
             </span>
             <span>
-              <b>Address: </b> Lisboa
+              <b>Address: </b> {address}
             </span>
           </div>
         </div>
+        <div className="xl:px-20 space-y-16">
+          <div>
+            <Title title="About" color="#8ea69b" />
+            Cursei o nível 4 em Programação e nível 5 em Técnico Especialista em
+            Programação e Sistemas de Informação. Conheci o serviço de cloud, o
+            que me despertou muito interesse em aprender a implementar soluções
+            de baixo custo e estratégias de migração de aplicações. Para isso
+            almejo uma oportunidade para atuar na área de TI, com foco em Cloud.
+          </div>
 
-        <div>
-          <Title title="consectetur adipiscing ultrices" color="#8ea69b"/>
-          
-          Sed placerat, turpis nec lobortis ultrices, velit turpis hendrerit
-          risus, ut varius orci nisl tincidunt dui. Vivamus auctor magna ut
-          semper porta. Praesent sodales mi tellus, sed interdum ligula
-          porttitor id. Duis in erat metus. Phasellus efficitur laoreet arcu,
-          vitae pellentesque turpis condimentum sed. Vivamus dui enim, euismod
-          non gravida imperdiet, vulputate at massa. Sed tincidunt mattis metus
-          aliquet finibus. Quisque suscipit quam id justo venenatis, in mollis
-          ligula elementum. Suspendisse eleifend, lorem id dapibus blandit,
-        </div>
+          <div>
+            <Title title="Work Experience" color="#8ea69b" />
+            {workExperience.map((each) => (
+              <div className="flex flex-col space-y-2 my-4">
+                <div className="flex flex-col">
+                  <b className="text-sm">{each.date}</b>
+                  <b className="text-[15px]">{each.company}</b>
+                </div>
+                <span className="">{job}</span>
+                <span className="">{each.location}</span>
+              </div>
+            ))}
+          </div>
 
-        <div>
-        <Title title="consectetur adipiscing" color="#8ea69b"/>
-          Sed placerat, turpis nec lobortis ultrices, velit turpis hendrerit
-          risus, ut varius orci nisl tincidunt dui. Vivamus auctor magna ut
-          semper porta. Praesent sodales mi tellus, sed interdum ligula
-          porttitor id. Duis in erat metus. Phasellus efficitur laoreet arcu,
-          vitae pellentesque turpis condimentum sed. Vivamus dui enim, euismod
-          non gravida imperdiet, vulputate at massa. Sed tincidunt mattis metus
-          aliquet finibus. Quisque suscipit quam id justo venenatis, in mollis
-          ligula elementum. Suspendisse eleifend, lorem id dapibus blandit,
-        </div>
+          <div>
+            <Title title="Education" color="#8ea69b" />
+            {education.map((each) => (
+              <div className="flex flex-col space-y-2 my-4">
+                    <div className="flex flex-col">
+                    <b className="text-sm">{each.date}</b>
+                <b className="text-[15px]">{each.name}</b>
+                </div> 
+                <span className="">{each.level}</span>
+                <span className="text-sm">{each.location}</span>
+              </div>
+            ))}
+          </div>
 
-        <div>
-          <Title title="consectetur adipiscing ultrices" color="#8ea69b"/>
-          Sed placerat, turpis nec lobortis ultrices, velit turpis hendrerit
-          risus, ut varius orci nisl tincidunt dui. Vivamus auctor magna ut
-          semper porta. Praesent sodales mi tellus, sed interdum ligula
-          porttitor id. Duis in erat metus. Phasellus efficitur laoreet arcu,
-          vitae pellentesque turpis condimentum sed. Vivamus dui enim, euismod
-          non gravida imperdiet, vulputate at massa. Sed tincidunt mattis metus
-          aliquet finibus. Quisque suscipit quam id justo venenatis, in mollis
-          ligula elementum. Suspendisse eleifend, lorem id dapibus blandit,
-        </div>
-
-        <div>
-          <Title title="consectetur adipiscing" color="#8ea69b"/>
-          Sed placerat, turpis nec lobortis ultrices, velit turpis hendrerit
-          risus, ut varius orci nisl tincidunt dui. Vivamus auctor magna ut
-          semper porta. Praesent sodales mi tellus, sed interdum ligula
-          porttitor id. Duis in erat metus. Phasellus efficitur laoreet arcu,
-          vitae pellentesque turpis condimentum sed. Vivamus dui enim, euismod
-          non gravida imperdiet, vulputate at massa. Sed tincidunt mattis metus
-          aliquet finibus. Quisque suscipit quam id justo venenatis, in mollis
-          ligula elementum. Suspendisse eleifend, lorem id dapibus blandit,
-        </div>
-
-        <div>
-          <Title title="consectetur adipiscing ultrices" color="#8ea69b"/>
-          Sed placerat, turpis nec lobortis ultrices, velit turpis hendrerit
-          risus, ut varius orci nisl tincidunt dui. Vivamus auctor magna ut
-          semper porta. Praesent sodales mi tellus, sed interdum ligula
-          porttitor id. Duis in erat metus. Phasellus efficitur laoreet arcu,
-          vitae pellentesque turpis condimentum sed. Vivamus dui enim, euismod
-          non gravida imperdiet, vulputate at massa. Sed tincidunt mattis metus
-          aliquet finibus. Quisque suscipit quam id justo venenatis, in mollis
-          ligula elementum. Suspendisse eleifend, lorem id dapibus blandit,
+          <div>
+            <Title title="Skills & Expertise" color="#8ea69b" />
+            <div className="flex-wrap">
+              {skills.map((skill, index) => 
+              (
+                <div className="inline-block"> <span className="text-sm ">{skill}</span> {(index !== skills.length-1) && <span className="mx-2">•</span>}</div>))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

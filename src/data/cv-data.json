@@ -1,47 +1,345 @@
-[
-  {
-    "livia": {
-      "name": "Lívia Gomes",
-      "phone": "321654987",
-      "email": "liviapriscilla@hotmail.com",
-      "address": "Lisboa",
-      
-      "socials": {
-        "linkedin": "lalalal",
-        "github": "lalalal",
-        "instagram": "lalalal",
-        "stackoverflow": "lalalal"
-      },
-      "Work-Experience": [
-        {
-          "company": "",
-            "date": "",
-            "location": "",
-            "details": {}
-        },
-        {
-          "company": "",
-            "date": "",
-            "location": "",
-            "details": {}
-        },
-        {
-          "company": "",
-            "date": "",
-            "location": "",
-            "details": {}
-        }        
-      ],
-      "Education": [{
-        "date": "",
-        "name": "",
-        "location": "",
-        "level": "" 
-      }]
-    },
-    "thais": {},
-    "wes": {},
+{
+  "livia": {
+    "name": "Lívia Gomes",
+    "phone": "(+351) 321654987",
+    "email": "liviapriscilla@hotmail.com",
+    "address": "Lisboa",
+    "image": "assets/livia.jpg",
+    "job": "Front End Developer",
 
-    "dyogo": {}
+    "socials": {
+      "linkedin": "lalalal",
+      "github": "lalalal",
+      "instagram": "lalalal",
+      "stackoverflow": "lalalal"
+    },
+    "workExperience": [
+      {
+        "company": "Momentum One (Freelancer)",
+        "date": "03/2021 - presente",
+        "location": "Lisboa"
+      },
+      {
+        "company": "Lusodados",
+        "date": "02/2018 - 03/2021",
+        "location": "Lisboa"
+      },
+      {
+        "company": "Gold Excursões",
+        "date": "03/2017 - 02/2021",
+        "location": "Lisboa"
+      }
+    ],
+    "education": [
+      {
+        "date": "09/2019 - 06/2021",
+        "name": "Universidade Autonôma de Lisboa",
+        "location": "Lisboa",
+        "level": "Licenciatura"
+      },
+      {
+        "date": "03/2018 - 04/2019",
+        "name": "Técnico/a Especialista em Tecnologias e Programação de Sistemas de Informação",
+        "location": "Lisboa",
+        "level": "Nível 5"
+      },
+      {
+        "date": "03/2018 - 04/2019",
+        "name": "Técnico/a Especialista em Tecnologias e Programação de Sistemas de Informação",
+        "location": "Lisboa",
+        "level": "Nível 5"
+      }
+    ],
+    "skills": [
+      "AMP - Accelerated Mobile Pages",
+      "Google API",
+      "Google Webmaster Tools",
+      "Google Tag Manager",
+      "Cloud",
+      "HTML5",
+      "CSS3",
+      "Javascript",
+      "Vite",
+      "Next.js",
+      "GraphQL",
+      "Strapi.js ",
+      "Figma",
+      "React",
+      "PHP",
+      "MySQL",
+      "Typescript",
+      "Bootstrap",
+      "TailwindCss",
+      "Materialize",
+      "Laravel",
+      "Blockchain",
+      "Terra.js",
+      "Laragon",
+      "Docker",
+      ".NET",
+      "ASP.NET",
+      "Cpanel",
+      "Plesk",
+      "Python",
+      "C/C++",
+      "Oracle",
+      "Sistemas de Redes Locais",
+      "Administração de Base de Dados para Programadores",
+      "SQL Server",
+      "WebServices",
+      "MVC"
+    ]
+  },
+  "thais": {
+    "name": "Thais",
+    "phone": "321654987",
+    "email": "thais@hotmail.com",
+    "address": "Lisboa",
+    "image": "",
+    "job": "",
+    "socials": {
+      "linkedin": "lalalal",
+      "github": "lalalal",
+      "instagram": "lalalal",
+      "stackoverflow": "lalalal"
+    },
+    "workExperience": [
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      },
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      },
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      }
+    ],
+    "education": [
+      {
+        "date": "02/2019 - 20/2021",
+        "name": "lalalal",
+        "location": "lalalal",
+        "level": "lalalal"
+      },
+      {
+        "date": "02/2019 - 20/2021",
+        "name": "lalalal",
+        "location": "lalalal",
+        "level": "lalalal"
+      }
+    ],
+     "skills": [
+      "HTML5",
+      "CSS3",
+      "Javascript",
+      "Vite",
+      "Next.js",
+      "GraphQL",
+      "Strapi.js ",
+      "Figma",
+      "React",
+      "PHP",
+      "MySQL",
+      "Typescript",
+      "Bootstrap",
+      "TailwindCss",
+      "Materialize",
+      "Laravel",
+      "Blockchain",
+      "Terra.js",
+      "AMP - Accelerated Mobile Pages",
+      "Google API",
+      "Google Webmaster Tools",
+      "Google Tag Manager",
+      "Cloud",
+      "Laragon",
+      "Docker",
+      ".NET",
+      "ASP.NET",
+      "Cpanel",
+      "Plesk",
+      "Python",
+      "C/C++",
+      "Oracle",
+      "Sistemas de Redes Locais",
+      "Administração de Base de Dados para Programadores",
+      "SQL Server",
+      "WebServices",
+      "MVC"
+    ]
+  },
+  "dyogo": {
+    "name": "Dyogo",
+    "phone": "321654987",
+    "email": "liviapriscilla@hotmail.com",
+    "address": "Lisboa",
+    "image": "",
+    "job": "",
+    "socials": {
+      "linkedin": "lalalal",
+      "github": "lalalal",
+      "instagram": "lalalal",
+      "stackoverflow": "lalalal"
+    },
+    "workExperience": [
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      },
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      },
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      }
+    ],
+    "education": [
+      {
+        "date": "02/2019 - 20/2021",
+        "name": "lalalal",
+        "location": "lalalal",
+        "level": "lalalal"
+      },
+      {
+        "date": "02/2019 - 20/2021",
+        "name": "lalalal",
+        "location": "lalalal",
+        "level": "lalalal"
+      }
+    ],
+     "skills": [
+      "HTML5",
+      "CSS3",
+      "Javascript",
+      "Vite",
+      "Next.js",
+      "GraphQL",
+      "Strapi.js ",
+      "Figma",
+      "React",
+      "PHP",
+      "MySQL",
+      "Typescript",
+      "Bootstrap",
+      "TailwindCss",
+      "Materialize",
+      "Laravel",
+      "Blockchain",
+      "Terra.js",
+      "AMP - Accelerated Mobile Pages",
+      "Google API",
+      "Google Webmaster Tools",
+      "Google Tag Manager",
+      "Cloud",
+      "Laragon",
+      "Docker",
+      ".NET",
+      "ASP.NET",
+      "Cpanel",
+      "Plesk",
+      "Python",
+      "C/C++",
+      "Oracle",
+      "Sistemas de Redes Locais",
+      "Administração de Base de Dados para Programadores",
+      "SQL Server",
+      "WebServices",
+      "MVC"
+    ]
+  },
+  "humberto": {
+    "name": "Humberto",
+    "phone": "321654987",
+    "email": "liviapriscilla@hotmail.com",
+    "address": "Lisboa",
+    "image": "lalalal",
+    "job": "lalalal",
+    "socials": {
+      "linkedin": "lalalal",
+      "github": "lalalal",
+      "instagram": "lalalal",
+      "stackoverflow": "lalalal"
+    },
+    "workExperience": [
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      },
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      },
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      }
+    ],
+    "education": [
+      {
+        "date": "02/2019 - 20/2021",
+        "name": "lalalal",
+        "location": "lalalal",
+        "level": "lalalal"
+      },
+      {
+        "date": "02/2019 - 20/2021",
+        "name": "lalalal",
+        "location": "lalalal",
+        "level": "lalalal"
+      }
+    ],
+     "skills": [
+      "HTML5",
+      "CSS3",
+      "Javascript",
+      "Vite",
+      "Next.js",
+      "GraphQL",
+      "Strapi.js ",
+      "Figma",
+      "React",
+      "PHP",
+      "MySQL",
+      "Typescript",
+      "Bootstrap",
+      "TailwindCss",
+      "Materialize",
+      "Laravel",
+      "Blockchain",
+      "Terra.js",
+      "AMP - Accelerated Mobile Pages",
+      "Google API",
+      "Google Webmaster Tools",
+      "Google Tag Manager",
+      "Cloud",
+      "Laragon",
+      "Docker",
+      ".NET",
+      "ASP.NET",
+      "Cpanel",
+      "Plesk",
+      "Python",
+      "C/C++",
+      "Oracle",
+      "Sistemas de Redes Locais",
+      "Administração de Base de Dados para Programadores",
+      "SQL Server",
+      "WebServices",
+      "MVC"
+    ]
   }
-]
+}
