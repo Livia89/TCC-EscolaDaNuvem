@@ -18,7 +18,7 @@ function SliderPage(props: sidemenuProps): React.ReactElement {
  
   return (
     <>
-      <div className="lg:grid lg:grid-cols-2 bg-[#8ea69b] flex flex-col-reverse w-screen">
+      <div className="lg:grid lg:grid-cols-2 bg-[#8ea69b] flex flex-col-reverse sm:h-full w-screen">
       
         <CurriculumVitae data={data} />
        <ImageSection
