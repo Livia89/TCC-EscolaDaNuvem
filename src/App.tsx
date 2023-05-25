@@ -1,75 +1,70 @@
-import { useState } from "react";
-import Sidemenu from "./components/Sidemenu";
-import Slider from "react-slick";
-import liviaImage from "./assets/livia.jpg";
-
-import CurriculumVitae from "./components/CurriculumVitae";
-import { sidemenuData } from "./share/interfaces";
+import { useEffect, useState } from "react";
 
 import cvData from "./data/cv-data.json";
 
 import "./App.css";
+import SliderPage from "./components/Slider";
+
+import Sidemenu from "./components/Sidemenu";
+import { Users, UsersData } from "./share/interfaces";
+
+
 
 function App() {
-  const [sidebarMenu, setSideBarMenu] = useState<sidemenuData>();
-  const [curriculumVitae, setCurriculumVitae] = useState<sidemenuData>();
+  const [screenSize, setScreenSize] = useState<number>(window.innerWidth || 0);
+  const [fixedMenu, setFixedMenu] = useState<boolean>(false);
+  const [users, setUsers] = useState<Users[]>([]);
 
-  console.log(cvData);
+  
+  const setContainerSlideSize = (): number => {
+    return Object.keys(cvData).length * screenSize;
+  };  
 
-  var settings = {
-    dots: false,
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  
+  useEffect(() => { 
+
+     const usersArr: { id: string; data: UsersData; active: boolean }[] = Object.entries(cvData).map(
+      ([name, user]: [name: string, user: UsersData]) => {   
+        
+        return { id: name, data: user, active: false }; 
+      }
+    ); 
+ 
+    
+    usersArr.length && setUsers(usersArr);   
+
+    /* quando clicar vai deslizar aqui 
+    document.getElementById("livia3")?.offsetLeft;
+ */
+    
+     const scrollY = document.documentElement;
+    const image = document.getElementById("livia3")
+    document.addEventListener("scroll", () => {
+     
+      scrollY.scrollTop > 0 && setFixedMenu(true)
+    });
+  
+    image?.addEventListener("mousemove", () => setFixedMenu(false)) 
+ 
+    setScreenSize(setContainerSlideSize());
+  }, []);
+
 
   return (
-    <>
-      <div className=" overflow-hidden w-screen">
-        <div className="w-[5000px]">
-          <div className="flex flex-col ">
-            <div className="flex transition w-screen">
-              <div className="sm:w-3/6">
-                <CurriculumVitae />
-              </div>
-              <div className={`sm:w-3/6 right-0 bottom-0 top-0`}>
-                <Sidemenu />
-              </div>
-            </div>
-            <div className="flex transition w-screen ">
-              <div className="sm:w-3/6">
-                <CurriculumVitae />
-              </div>
-              <div className={`sm:w-3/6 right-0 bottom-0 top-0`}>
-                <Sidemenu />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <> {/*translate-x-[-0px]  transform*/ }
+      <div className={`w-[${screenSize}px] transition-all flex`}>
+        {users.length && users?.map((user: Users, index: number) => {
 
-      {/*     <div className="flex fixed space-x-4 right-2 -top-28">
-        <div>
-          <img
-            src={liviaImage}
-            className="rounded-full hover:scale-50 transition-all sm:mt-28 shadow"
-            height={50}
-            width={50}
-          />
-          Joaquina
-        </div>
-        <div>
-          <img
-            src={liviaImage}
-            className="rounded-full hover:scale-50 transition-all sm:mt-28 shadow"
-            height={50}
-            width={50}
-          />
-          Francisca
-        </div>
-      </div>
-    
- */}
+          return (
+            <div className={`w-screen`} id={`livia${index}`}>
+              <SliderPage fixed={fixedMenu} data={user.data} />
+            </div>
+          );
+        })}
+      </div> 
+     
+      {users.length && <Sidemenu linkId={users}/>}
+   
     </>
   );
 }
