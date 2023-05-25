@@ -1,7 +1,6 @@
 // image url
 // social midias
 import liviaImage from "../assets/livia.jpg";
-import { Users, UsersData } from "../share/interfaces";
 
 function Sidemenu({...linkId}): React.ReactElement {
   console.log(linkId)

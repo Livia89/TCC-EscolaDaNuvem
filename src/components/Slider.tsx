@@ -1,10 +1,9 @@
-import { useState } from "react";
+
 import CurriculumVitae from "./CurriculumVitae";
 
-import { SidemenuData, UsersData } from "../share/interfaces";
+import { UsersData } from "../share/interfaces";
 
 import ImageSection from "./ImageSection";
-import Sidemenu from "./Sidemenu";
 
 interface sidemenuProps {
   data: UsersData;
@@ -14,8 +13,8 @@ interface sidemenuProps {
 function SliderPage(props: sidemenuProps): React.ReactElement {
   const { data, fixed } = props;
 
-  const [sidebarMenu, setSideBarMenu] = useState<SidemenuData>();
-  const [curriculumVitae, setCurriculumVitae] = useState<SidemenuData>();
+/*   const [sidebarMenu, setSideBarMenu] = useState<SidemenuData>();
+  const [curriculumVitae, setCurriculumVitae] = useState<SidemenuData>(); */
  
   return (
     <>
