@@ -56,14 +56,14 @@ function App() {
         {users.length && users?.map((user: Users, index: number) => {
 
           return (
-            <div className={`w-screen`} id={`livia${index}`}>
+            <div className={`w-screen`} id={`${user.id}`}>
               <SliderPage fixed={fixedMenu} data={user.data} />
             </div>
           );
         })}
       </div> 
      
-      {users.length && <Sidemenu linkId={users}/>}
+      {users.length && <Sidemenu {...users}/>}  
    
     </>
   );

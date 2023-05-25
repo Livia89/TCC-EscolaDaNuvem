@@ -21,13 +21,13 @@ interface SectionImageProps{
 function ImageSection(props: SectionImageProps): React.ReactElement{
   const {fixed, socials } = {...props}; 
   return (
-    <div className={`p-8 flex flex-col  items-center `}>
+    <div className={`p-8 flex flex-col   items-center lg:h-full`}>
     
-      <div className={`text-center ${fixed && " fixed top-1"}`}>
+      <div className={`text-center ${fixed && " lg:fixed top-1"}`}>
 
       <img
         src={liviaImage}
-        className={`rounded-full sm:mt-28 shadow  `}
+        className={`rounded-full lg:mt-28 shadow  `}
         height={300}
         width={300}
         />
