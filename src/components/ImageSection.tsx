@@ -34,16 +34,20 @@ function ImageSection(props: SectionImageProps): React.ReactElement{
   
       <div className="my-6 space-x-4 ">
         
-      {Object.keys(socials).map(social => {
-        return social.length && <FontAwesomeIcon
+      {Object.entries(socials).map(([socialName, socialLink], index: number) => {
+        
+        return socialName.length && <a href={socialLink}  key={index * Math.random()+1}>
+          <FontAwesomeIcon
+         
           className="bg-white p-2 rounded-full"
           size={"lg"}
-          icon={social === SocialName.github && faGithub 
-            || social === SocialName.stackoverflow && faStackOverflow 
-            || social === SocialName.instagram && faInstagram 
-            || social === SocialName.linkedin && faLinkedin 
+          icon={socialName === SocialName.github && faGithub 
+            || socialName === SocialName.stackoverflow && faStackOverflow 
+            || socialName === SocialName.instagram && faInstagram 
+            || socialName === SocialName.linkedin && faLinkedin 
             || faExclamation }
         />
+        </a>
       })}
     
       </div>
