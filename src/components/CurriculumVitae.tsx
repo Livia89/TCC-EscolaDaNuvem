@@ -10,7 +10,7 @@ Education
 Contacts 
 */
 
-import { UsersData } from "../share/interfaces";
+import { Education, UsersData, WorkExperience } from "../share/interfaces";
 import Title from "./SectionTitle";
 interface CVProps {
   data: UsersData;
@@ -63,15 +63,12 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
             que me despertou muito interesse em aprender a implementar soluções
             de baixo custo e estratégias de migração de aplicações. Para isso
             almejo uma oportunidade para atuar na área de TI, com foco em Cloud.
-
-            
-           
           </div>
 
           <div>
             <Title title="Work Experience" color="#8ea69b" />
-            {workExperience.map((each) => (
-              <div className="flex flex-col space-y-2 my-4">
+            {workExperience.map((each: WorkExperience, index: number) => (
+              <div className="flex flex-col space-y-2 my-4"  key={index * Math.random()+1}>
                 <div className="flex flex-col">
                   <b className="text-sm">{each.date}</b>
                   <b className="text-[15px]">{each.company}</b>
@@ -84,8 +81,8 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
 
           <div>
             <Title title="Education" color="#8ea69b" />
-            {education.map((each) => (
-              <div className="flex flex-col space-y-2 my-4">
+            {education.map((each: Education, index: number) => (
+              <div className="flex flex-col space-y-2 my-4" key={index * Math.random()+1}>
                 <div className="flex flex-col">
                   <b className="text-sm">{each.date}</b>
                   <b className="text-[15px]">{each.name}</b>
@@ -99,9 +96,9 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
           <div>
             <Title title="Skills & Expertise" color="#8ea69b" />
             <div className="flex-wrap">
-              {skills.map((skill, index) => (
-                <div className="inline-block">
-                  {" "}
+              {skills.map((skill, index: number) => (
+                <div className="inline-block" key={index * Math.random()+1}>
+                  
                   <span className="text-sm ">{skill}</span>{" "}
                   {index !== skills.length - 1 && (
                     <span className="mx-2">•</span>
