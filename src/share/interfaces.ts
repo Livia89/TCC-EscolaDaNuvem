@@ -11,10 +11,10 @@ export interface PersonalData {
 }
 
 export interface Socials {
-  linkedin: string;
-  github: string;
-  instagram: string;
-  stackoverflow: string;
+  linkedin?: string;
+  github?: string;
+  instagram?: string;
+  stackoverflow?: string;
 }
 
 export interface WorkExperience {
@@ -44,8 +44,7 @@ skills: string[];
 }
 
 export interface Users {
-  id: string;
-  data: UsersData;
-  active: boolean;
+    data: UsersData;
+    active: boolean;
 }
 
