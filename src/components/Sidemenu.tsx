@@ -2,8 +2,8 @@
 // social midias
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import liviaImage from "../assets/livia.jpg";
-import { Users, UsersData } from "../share/interfaces";
-import { faArrowRight, faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+import { Users } from "../share/interfaces";
+import { faArrowRight, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 interface SidemenuProps{

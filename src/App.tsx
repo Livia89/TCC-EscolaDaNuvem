@@ -24,6 +24,7 @@ function App() {
   };  
 
   const handleClickLink = (id: string) => {
+    console.log(id);
     /* 
     const oi = users.map(e => setUsers()).filter((usr:Users) => usr.);
      */
@@ -73,7 +74,7 @@ function App() {
           );
         })} 
       </div> 
-      {/* {users.length && <Sidemenu handleClickLink={handleClickLink} users={users}/>}   */}
+      {users?.length && <Sidemenu handleClickLink={handleClickLink} users={[]}/>}  
     </>
   );
 }
