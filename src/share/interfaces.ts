@@ -43,8 +43,12 @@ education: Education[];
 skills: string[];
 }
 
-export interface Users {
+export interface UsersActiveControls {
     data: UsersData;
     active: boolean;
 }
 
+export interface formatterUser {
+  [x:string]: UsersActiveControls
+
+}
