@@ -37,6 +37,7 @@ phone: string;
 email: string;
 address: string;
 job: string;
+cvPath: string; 
 socials: Socials;
 workExperience: WorkExperience[]; 
 education: Education[];
