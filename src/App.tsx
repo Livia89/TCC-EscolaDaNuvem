@@ -25,9 +25,9 @@ function App() {
 
   const handleClickLink = (id: string) => {
     console.log(id);
-
-        /* quando clicar vai deslizar aqui 
-    document.getElementById("livia3")?.offsetLeft;
+    setFixedMenu(false)
+       //  quando clicar vai deslizar aqui 
+   /*  document.getElementById("livia3")?.offsetLeft;
  
     
      const scrollY = document.documentElement;
@@ -38,8 +38,8 @@ function App() {
     });
   
     image?.addEventListener("mousemove", () => setFixedMenu(false)) 
+ 
  */
-
     /* 
     const oi = users.map(e => setUsers()).filter((usr:Users) => usr.);
      */
