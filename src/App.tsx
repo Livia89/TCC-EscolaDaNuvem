@@ -6,10 +6,10 @@ import "./App.css";
 import SliderPage from "./components/Slider";
 
 import Sidemenu from "./components/Sidemenu";
-import { Users, UsersData } from "./share/interfaces";
+import { UsersActiveControls, UsersData } from "./share/interfaces";
 
 interface formatterUser {
-  [x:string]: Users
+  [x:string]: UsersActiveControls
 
 }
 
@@ -25,6 +25,21 @@ function App() {
 
   const handleClickLink = (id: string) => {
     console.log(id);
+
+        /* quando clicar vai deslizar aqui 
+    document.getElementById("livia3")?.offsetLeft;
+ 
+    
+     const scrollY = document.documentElement;
+    const image = document.getElementById("livia3")
+    document.addEventListener("scroll", () => {
+     
+      scrollY.scrollTop > 0 && setFixedMenu(true)
+    });
+  
+    image?.addEventListener("mousemove", () => setFixedMenu(false)) 
+ */
+
     /* 
     const oi = users.map(e => setUsers()).filter((usr:Users) => usr.);
      */
@@ -36,27 +51,11 @@ function App() {
   useEffect(() => { 
     /* load user data and created new object */ 
      const usersArr: {[x: string]: { data: UsersData; active: boolean }}[] = Object.entries(cvData).map(
-      ([name, user]: [name: string, user: UsersData]) => {    
-        
-        return {[name]: { data: user, active: false }}; 
+      ([name, user]: [name: string, user: UsersData]) => {     
+        return {[name]: { data: user, active: false }};  
       }
     )  
-      console.log(usersArr);
  usersArr?.length && setUsers(usersArr);    
-
-    /* quando clicar vai deslizar aqui 
-    document.getElementById("livia3")?.offsetLeft;
- */
-    
-     const scrollY = document.documentElement;
-    const image = document.getElementById("livia3")
-    document.addEventListener("scroll", () => {
-     
-      scrollY.scrollTop > 0 && setFixedMenu(true)
-    });
-  
-    image?.addEventListener("mousemove", () => setFixedMenu(false)) 
- 
     setScreenSize(setContainerSlideSize());
   }, []); 
   
@@ -65,8 +64,7 @@ function App() {
     <> {/*translate-x-[-0px]  transform*/ }
       <div className={`w-[${screenSize}px] transition-all flex`}>
         
-   {Object.values({...users})?.map((user, index:number) => {
-          /* REVER ISSO AQUI */ 
+   {users?.map((user:formatterUser, index:number) => {
           return (
             <div className={`w-screen`} key={index * Math.random()+1}>
            <SliderPage fixed={fixedMenu} data={Object.values(user)?.[0]?.data} /> 
