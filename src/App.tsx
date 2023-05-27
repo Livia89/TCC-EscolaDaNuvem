@@ -74,7 +74,7 @@ function App() {
           );
         })} 
       </div> 
-      {users?.length && <Sidemenu handleClickLink={handleClickLink} users={[]}/>}  
+      {users?.length && <Sidemenu handleClickLink={handleClickLink} users={users}/>}  
     </>
   );
 }
