@@ -22,6 +22,7 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
     job,
     email,
     address,
+    cvPath,
     education,
     workExperience,
     skills,
@@ -32,11 +33,14 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
   return (
     <div className="p-8 bg-white ">
       <div className="mb-8">
-        <button className="bg-[#140707] hover:bg-gray-100 hover:shadow hover:text-[#140707] text-white px-6 py-3 transition-colors ease ">
+        <a
+          href="html-standard.pdf"
+          download={cvPath}
+          className="bg-[#140707] hover:bg-gray-100 hover:shadow hover:text-[#140707] text-white px-6 py-3 transition-colors ease "
+        >
           Download CV
-        </button>
+        </a>
       </div>
-
       <div className="flex justify-center flex-col items-center transform  transition-all scroll-smooth">
         <div className="my-16 ">
           <div className="my-6">
@@ -68,7 +72,10 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
           <div>
             <Title title="Work Experience" color="#8ea69b" />
             {workExperience.map((each: WorkExperience, index: number) => (
-              <div className="flex flex-col space-y-2 my-4"  key={index * Math.random()+1}>
+              <div
+                className="flex flex-col space-y-2 my-4"
+                key={index * Math.random() + 1}
+              >
                 <div className="flex flex-col">
                   <b className="text-sm">{each.date}</b>
                   <b className="text-[15px]">{each.company}</b>
@@ -78,11 +85,13 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
               </div>
             ))}
           </div>
-
           <div>
             <Title title="Education" color="#8ea69b" />
             {education.map((each: Education, index: number) => (
-              <div className="flex flex-col space-y-2 my-4" key={index * Math.random()+1}>
+              <div
+                className="flex flex-col space-y-2 my-4"
+                key={index * Math.random() + 1}
+              >
                 <div className="flex flex-col">
                   <b className="text-sm">{each.date}</b>
                   <b className="text-[15px]">{each.name}</b>
@@ -92,13 +101,11 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
               </div>
             ))}
           </div>
-
           <div>
             <Title title="Skills & Expertise" color="#8ea69b" />
             <div className="flex-wrap">
               {skills.map((skill, index: number) => (
-                <div className="inline-block" key={index * Math.random()+1}>
-                  
+                <div className="inline-block" key={index * Math.random() + 1}>
                   <span className="text-sm ">{skill}</span>{" "}
                   {index !== skills.length - 1 && (
                     <span className="mx-2">•</span>
@@ -112,5 +119,4 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
     </div>
   );
 }
-
 export default CurriculumVitae;
