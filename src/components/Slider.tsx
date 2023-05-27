@@ -12,9 +12,6 @@ interface sidemenuProps {
 function SliderPage(props: sidemenuProps): React.ReactElement {
   const { data, fixed } = props;
 
-  /*   const [sidebarMenu, setSideBarMenu] = useState<SidemenuData>();
-  const [curriculumVitae, setCurriculumVitae] = useState<SidemenuData>(); */
-
   return (
     <>
       <div className="lg:grid lg:grid-cols-2 bg-[#8ea69b] flex flex-col-reverse sm:h-full w-screen">

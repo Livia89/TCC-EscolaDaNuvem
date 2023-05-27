@@ -14,7 +14,6 @@ interface SidemenuProps {
 function Sidemenu(props: SidemenuProps): React.ReactElement {
   const { handleClickLink, users } = { ...props };
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-
   return (
     <>
       <div
@@ -33,13 +32,13 @@ function Sidemenu(props: SidemenuProps): React.ReactElement {
         {users?.map((user: formatterUser, index: number) => (
           <div
             key={index * Math.random() + 1}
-            className={`${user.active && "border-4 border-white"}`}
+            
             onClick={() => handleClickLink(Object.keys(user)?.[0])}
-          >
+          > 
             <a href={`#${Object.keys(user)?.[0]}`} className="text-sm ">
               <img
                 src={liviaImage}
-                className="rounded-full hover:scale-50 transition-all sm:mt-5 shadow mx-auto"
+                className={`rounded-full transition-all shadow mx-auto ${Object.values(user)?.[0].active && " border-2 border-white opacity-50"}`}
                 height={50}
                 width={50}
               />

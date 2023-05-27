@@ -15,17 +15,31 @@ interface formatterUser {
 
 function App() {
   const [screenSize, setScreenSize] = useState<number>(window.innerWidth || 0);
-  const [fixedMenu, setFixedMenu] = useState<boolean>(false);
+  const [fixedMenu, setFixedMenu] = useState<boolean>(true);
   const [users, setUsers] = useState<formatterUser[]>();
 
-  
   const setContainerSlideSize = (): number => {
     return Object.keys(cvData).length * screenSize;
-  };  
+  };
+  
+  const setActiveUser = (id: string):void => {    
+    const newArr = users?.map((user: formatterUser) => {
+      const name: string = Object.keys(user)?.[0];
+      const userD:UsersActiveControls = Object.values(user)?.[0];
+      return {[name]: {...userD, active: id === name && true || false}}
+    })
+    setUsers(newArr)
+  }
 
   const handleClickLink = (id: string) => {
-    console.log(id);
+    setActiveUser(id);
+    
+
+   
+    window.scrollTo(10, 0);
     setFixedMenu(false)
+    document.getElementById(id)?.offsetLeft;
+  
        //  quando clicar vai deslizar aqui 
    /*  document.getElementById("livia3")?.offsetLeft;
  
@@ -40,10 +54,7 @@ function App() {
     image?.addEventListener("mousemove", () => setFixedMenu(false)) 
  
  */
-    /* 
-    const oi = users.map(e => setUsers()).filter((usr:Users) => usr.);
-     */
-    /* userClicked && setUsers([{...userClicked, active: true}, ...users ]);   */
+
     
   }
 
@@ -55,6 +66,8 @@ function App() {
         return {[name]: { data: user, active: false }};  
       }
     )  
+
+    
  usersArr?.length && setUsers(usersArr);    
     setScreenSize(setContainerSlideSize());
   }, []); 
