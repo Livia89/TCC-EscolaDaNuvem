@@ -6,6 +6,7 @@
     "address": "Lisboa",
     "image": "assets/livia.jpg",
     "job": "Front End Developer",
+     "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
 
     "socials": {
       "linkedin": "https://www.linkedin.com/in/l%C3%ADvia-gomes-781b97135/",
@@ -96,6 +97,7 @@
     "address": "Lisboa",
     "image": "",
     "job": "",
+     "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
     "socials": {
       "linkedin": "lalalal",
       "github": "lalalal",
@@ -180,6 +182,7 @@
     "address": "Lisboa",
     "image": "",
     "job": "",
+     "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
     "socials": {
       "linkedin": "lalalal",
       "github": "lalalal",
@@ -264,6 +267,7 @@
     "address": "Lisboa",
     "image": "lalalal",
     "job": "lalalal",
+     "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
     "socials": {
       "linkedin": "lalalal",
       "github": "lalalal",
