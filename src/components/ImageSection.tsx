@@ -1,7 +1,7 @@
 // image url
 // social midias
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import liviaImage from "../assets/livia.jpg";
+import liviaImage from "../assets/livia/livia.jpg";
 
 import { 
   faLinkedin,
