@@ -37,13 +37,11 @@ function Sidemenu(props: SidemenuProps): React.ReactElement {
         {users?.map((user: formatterUser, index: number) => (
           <div
             key={index * Math.random() + 1}
-            className={`${
-              Object.values(user)?.[0].active && " pointer-events-none "
+            className={`  ${
+              Object.values(user)?.[0].active && " pointer-events-none " || "cursor-pointer"
             }`}
             onClick={() => handleClickOptMenu(Object.keys(user)?.[0])}
           >
-            
-            <a href={`#${Object.keys(user)?.[0]}`} className="text-sm ">
               <img
                 src={liviaImage}
                 className={`rounded-full transition-all shadow mx-auto ${
@@ -56,7 +54,6 @@ function Sidemenu(props: SidemenuProps): React.ReactElement {
               <span className="text-white text-sm">
                 {Object.values(user)?.[0].data.name.split(" ")[0]}
               </span>
-            </a>
           </div>
         ))}
         {!openMenu && (
