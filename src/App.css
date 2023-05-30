@@ -37,8 +37,9 @@ body {
 .slideX{
   @apply transform -translate-x-full;
   transition: .8s;
-}
+}  
 .slidey{
   transition: .8s;
   @apply transform -translate-y-full;
 }
+
