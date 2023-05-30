@@ -14,7 +14,6 @@ interface formatterUser {
 
 function App() {
   const [screenSize, setScreenSize] = useState<number>(window.innerWidth || 0);
-  const [fixedMenu, setFixedMenu] = useState<boolean>(true);
   const [users, setUsers] = useState<formatterUser[]>();
   const [position, setPosition] = useState<number>(0);
 
@@ -86,7 +85,6 @@ function App() {
                 id={`#${Object.keys(user)?.[0]}`}
               >
                 <SliderPage
-                  fixed={fixedMenu}
                   data={Object.values(user)?.[0]?.data}
                 />
               </div>

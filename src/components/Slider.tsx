@@ -6,11 +6,10 @@ import ImageSection from "./ImageSection";
 
 interface sidemenuProps {
   data: UsersData;
-  fixed?: boolean;
 }
 
 function SliderPage(props: sidemenuProps): React.ReactElement {
-  const { data, fixed } = props;
+  const { data } = props;
 
   return (
     <>
@@ -20,7 +19,6 @@ function SliderPage(props: sidemenuProps): React.ReactElement {
           {...{
             id: data.name,
             socials: data.socials,
-            fixed: fixed,
           }}
         />
       </div>

@@ -16,15 +16,14 @@ import { SocialName } from "../share/enums";
 interface SectionImageProps {
   id: string;
   socials: Socials;
-  fixed?: boolean;
 }
 function ImageSection(props: SectionImageProps): React.ReactElement {
-  const { fixed, socials } = { ...props };
+  const { socials } = { ...props };
 
   return (
     <div className={`p-8 flex flex-col items-center lg:h-full`}>
       <div
-        className={`text-center transition-all ${fixed && " lg:fixed "}`}
+        className={`text-center transition-all  lg:fixed `}
       >
         
           <img
