@@ -1,53 +1,39 @@
 import { useEffect, useState } from "react";
-
 import cvData from "./data/cv-data.json";
-
 import "./App.css";
 import SliderPage from "./components/Slider";
-
 import Sidemenu from "./components/Sidemenu";
-import { UsersActiveControls, UsersData } from "./share/interfaces";
-
-interface formatterUser {
-  [x: string]: UsersActiveControls;
-}
+import { UsersData, formatterUser } from "./share/interfaces";
+import { Homepage } from "./components/Homepage";
 
 function App() {
   const [screenSize, setScreenSize] = useState<number>(window.innerWidth || 0);
-  const [users, setUsers] = useState<formatterUser[]>();
-  const [position, setPosition] = useState<number>(0);
+  const [users, setUsers] = useState<formatterUser[]>([]);
+  const [position, setPosition] = useState<number | null>(null);
 
   // Set  total size to main container
   const setContainerSlideSize = (): number => {
     return Object.keys(cvData).length * screenSize;
   };
+/* 
+  const returnActiveUser = (
+    users: formatterUser[]
+  ): formatterUser => {
+    return users?.filter(
+      (user: formatterUser) => Object.values(user)?.[0].active
+    )?.[0];
+  }; */
 
-  const setActiveUser = (id: string): void => {
-    const newArr = users?.map((user: formatterUser) => {
-      const name: string = Object.keys(user)?.[0];
-      const userD: UsersActiveControls = Object.values(user)?.[0];
-      return { [name]: { ...userD, active: (id === name && true) || false } };
+  // Onclick on link sidemenu
+  const handleClickLink = (id: string)  => {
+   const potitionElement = document.getElementById(`#${id}`)?.offsetLeft;
+    const scrollY = window.scrollY;
+    if(!scrollY) setPosition(potitionElement || 0);
+    // Page scroll to top and set position after scrolling to top
+    window.scrollTo(0, 0);
+    document.addEventListener("scroll", () => {
+      !window.scrollY && setPosition(potitionElement || 0);
     });
-    setUsers(newArr);
-  };
-
-  const handleClickLink = (id: string) => {
-    const element = document.getElementById(`#${id}`)?.offsetLeft || 0;
-    const scrollY = document.documentElement;
-
-    setActiveUser(id);
-
-    if (scrollY.scrollTop) {
-      // Page scrolled down?
-
-      // Page scroll to top and set position after scrolling to top
-      window.scrollTo(10, 0);
-      document.addEventListener("scroll", () => {
-        !scrollY.scrollTop && setPosition(element);
-      });
-    } else {
-      setPosition(element);
-    }
   };
 
   useEffect(() => {
@@ -68,30 +54,39 @@ function App() {
   //
   return (
     <>
-      <div className={`w-[${screenSize}px] h-full `}>
-        <div className="overflow-x-hidden">
-          <div
-            style={{
-              left: `-${position}px`,
-              transition: "all .8s ease",
-            }}
-            className=" transition9s w-screen flex transition-all relative"
-          >
-            {users?.map((user: formatterUser, index: number) => {
-              return (
-                <div
-                  key={index * Math.random() + 1}
-                  id={`#${Object.keys(user)?.[0]}`}
-                >
-                  <SliderPage data={Object.values(user)?.[0]?.data} />
-                </div>
-              );
-            })}
+      <div className="hidden">
+        <Homepage data={users} />
+      </div>
+      <div className="">
+        <div className={`w-[${screenSize}px]  bg-white `}>
+          <div id="verCvs" className="overflow-x-hidden ">
+            <div
+              style={{
+                left: `-${position}px`,
+                transition: "all .8s ease",
+              }}
+              className=" w-screen flex transition-all relative"
+            >
+              {users?.map((user: formatterUser, index: number) => {
+                return (
+                  <div
+                    key={index * Math.random() + 1}
+                    id={`#${Object.keys(user)?.[0]}`}
+                  >
+                    <SliderPage data={Object.values(user)?.[0]?.data} />
+                  </div>
+                );
+              })}
+            </div>
+            {users?.length && (
+              <Sidemenu
+                setUsers={setUsers}
+                handleClickLink={handleClickLink}
+                users={users}
+              />
+            )}
           </div>
-          {users?.length && (
-            <Sidemenu handleClickLink={handleClickLink} users={users} />
-          )}
-        </div>{" "}
+        </div>
       </div>
     </>
   );
