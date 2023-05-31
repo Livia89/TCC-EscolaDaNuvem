@@ -21,8 +21,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden; 
+  /* overflow-x: hidden; 
+  -moz-osx-overflow-x: hidden; */
 }
+
 
 
 body {
@@ -32,14 +34,3 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
-
-.slideX{
-  @apply transform -translate-x-full;
-  transition: .8s;
-}  
-.slidey{
-  transition: .8s;
-  @apply transform -translate-y-full;
-}
-

@@ -17,7 +17,7 @@ function App() {
   const [users, setUsers] = useState<formatterUser[]>();
   const [position, setPosition] = useState<number>(0);
 
-  // Set  total size to main container  
+  // Set  total size to main container
   const setContainerSlideSize = (): number => {
     return Object.keys(cvData).length * screenSize;
   };
@@ -31,21 +31,19 @@ function App() {
     setUsers(newArr);
   };
 
- 
-
   const handleClickLink = (id: string) => {
-  
     const element = document.getElementById(`#${id}`)?.offsetLeft || 0;
     const scrollY = document.documentElement;
 
     setActiveUser(id);
 
-    if (scrollY.scrollTop) { // Page scrolled down?
-    
+    if (scrollY.scrollTop) {
+      // Page scrolled down?
+
       // Page scroll to top and set position after scrolling to top
-      window.scrollTo(10, 0); 
+      window.scrollTo(10, 0);
       document.addEventListener("scroll", () => {
-        !scrollY.scrollTop && setPosition(element); 
+        !scrollY.scrollTop && setPosition(element);
       });
     } else {
       setPosition(element);
@@ -60,9 +58,9 @@ function App() {
           return { [name]: { data: user, active: (!index && true) || false } };
         }
       );
-      // restart position
+    // restart position
     setPosition(0);
-      // Set main container size 
+    // Set main container size
     usersArr?.length && setUsers(usersArr);
     setScreenSize(setContainerSlideSize());
   }, []);
@@ -71,29 +69,29 @@ function App() {
   return (
     <>
       <div className={`w-[${screenSize}px] h-full `}>
-        <div
-          style={{
-            left: `-${position}px`,
-            transition: "all .8s ease",
-          }}
-          className=" transition9s w-screen flex transition-all relative"
-        >
-          {users?.map((user: formatterUser, index: number) => {
-            return (
-              <div
-                key={index * Math.random() + 1}
-                id={`#${Object.keys(user)?.[0]}`}
-              >
-                <SliderPage
-                  data={Object.values(user)?.[0]?.data}
-                />
-              </div>
-            );
-          })}
-        </div>
-        {users?.length && (
-          <Sidemenu handleClickLink={handleClickLink} users={users} />
-        )}
+        <div className="overflow-x-hidden">
+          <div
+            style={{
+              left: `-${position}px`,
+              transition: "all .8s ease",
+            }}
+            className=" transition9s w-screen flex transition-all relative"
+          >
+            {users?.map((user: formatterUser, index: number) => {
+              return (
+                <div
+                  key={index * Math.random() + 1}
+                  id={`#${Object.keys(user)?.[0]}`}
+                >
+                  <SliderPage data={Object.values(user)?.[0]?.data} />
+                </div>
+              );
+            })}
+          </div>
+          {users?.length && (
+            <Sidemenu handleClickLink={handleClickLink} users={users} />
+          )}
+        </div>{" "}
       </div>
     </>
   );
