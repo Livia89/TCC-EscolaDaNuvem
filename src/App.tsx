@@ -4,7 +4,6 @@ import "./App.css";
 import SliderPage from "./components/Slider";
 import Sidemenu from "./components/Sidemenu";
 import { UsersData, formatterUser } from "./share/interfaces";
-import { Homepage } from "./components/Homepage";
 
 function App() {
   const [screenSize, setScreenSize] = useState<number>(window.innerWidth || 0);
@@ -80,6 +79,8 @@ function App() {
           </div>
         </div>
       </div>
+      <Sidemenu handleClickLink={handleClickLink} setUsers={setUsers} users={users}/>
+
     </>
   );
 }
