@@ -21,7 +21,7 @@ function App() {
   const setContainerSlideSize = (): number => {
     return Object.keys(cvData).length * screenSize;
   };
-
+  // After click on sidemenu
   const setActiveUser = (id: string): void => {
     const newArr = users?.map((user: formatterUser) => {
       const name: string = Object.keys(user)?.[0];
@@ -37,9 +37,7 @@ function App() {
 
     setActiveUser(id);
 
-    if (scrollY.scrollTop) {
-      // Page scrolled down?
-
+    if (scrollY.scrollTop) { // Page scrolled down?
       // Page scroll to top and set position after scrolling to top
       window.scrollTo(10, 0);
       document.addEventListener("scroll", () => {
@@ -75,7 +73,7 @@ function App() {
               left: `-${position}px`,
               transition: "all .8s ease",
             }}
-            className=" transition9s w-screen flex transition-all relative"
+            className=" w-screen flex transition-all relative"
           >
             {users?.map((user: formatterUser, index: number) => {
               return (
