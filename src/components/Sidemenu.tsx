@@ -47,28 +47,30 @@ function Sidemenu(props: SidemenuProps): React.ReactElement {
             <FontAwesomeIcon icon={faArrowRight} color="white" size={"2xl"} />
           </span>
         </div>
-        {users?.map((user: formatterUser, index: number) => (
-          <div
-            key={index * Math.random() + 1}
-            className={`  ${
-              Object.values(user)?.[0].active && " pointer-events-none " || "cursor-pointer"
-            }`}
-            onClick={() => handleClickOptMenu(Object.keys(user)?.[0])}
-          >
-              <img
-                src={liviaImage}
-                className={`rounded-full transition-all shadow mx-auto ${
-                  Object.values(user)?.[0].active &&
-                  " border-2 border-white opacity-50"
-                }`}
-                height={50}
-                width={50}
-              />
-              <span className="text-white text-sm">
-                {Object.values(user)?.[0].data.name.split(" ")[0]}
-              </span>
-          </div>
-        ))}
+        {users?.map((user: formatterUser, index: number) => {
+          const name:string = Object.keys(user)?.[0];
+          const userValues:UsersActiveControls = Object.values(user)?.[0];
+          return   <div
+          key={index * Math.random() + 1}
+          className={`  ${
+            userValues.active && " pointer-events-none " || "cursor-pointer"
+          }`}
+          onClick={() => handleClickOptMenu(name)}
+        >
+            <img
+              src={liviaImage}
+              className={`rounded-full transition-all shadow mx-auto ${
+                userValues.active &&
+                " border-2 border-white opacity-50"
+              }`}
+              height={50}
+              width={50}
+            />
+            <span className="text-white text-sm">
+              {userValues.data.name.split(" ")[0]}
+            </span>
+        </div>
+        })}
         {!openMenu && (
           <div
             className="fixed top-3 right-32 cursor-pointer shadow-xl "

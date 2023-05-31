@@ -15,6 +15,7 @@ function App() {
   const setContainerSlideSize = (): number => {
     return Object.keys(cvData).length * screenSize;
   };
+
 /* 
   const returnActiveUser = (
     users: formatterUser[]
@@ -34,6 +35,7 @@ function App() {
     document.addEventListener("scroll", () => {
       !window.scrollY && setPosition(potitionElement || 0);
     });
+
   };
 
   useEffect(() => {
@@ -54,37 +56,27 @@ function App() {
   //
   return (
     <>
-      <div className="hidden">
-        <Homepage data={users} />
-      </div>
-      <div className="">
-        <div className={`w-[${screenSize}px]  bg-white `}>
-          <div id="verCvs" className="overflow-x-hidden ">
-            <div
-              style={{
-                left: `-${position}px`,
-                transition: "all .8s ease",
-              }}
-              className=" w-screen flex transition-all relative"
-            >
-              {users?.map((user: formatterUser, index: number) => {
-                return (
-                  <div
-                    key={index * Math.random() + 1}
-                    id={`#${Object.keys(user)?.[0]}`}
-                  >
-                    <SliderPage data={Object.values(user)?.[0]?.data} />
-                  </div>
-                );
-              })}
-            </div>
-            {users?.length && (
-              <Sidemenu
-                setUsers={setUsers}
-                handleClickLink={handleClickLink}
-                users={users}
-              />
-            )}
+      <div className={`w-[${screenSize}px]  bg-white`}>
+        <div className="overflow-x-hidden">
+          <div
+            style={{
+              left: `-${position}px`,
+              transition: "all .8s ease",
+            }}
+            className=" w-screen flex transition-all relative"
+          >
+            {users?.map((user: formatterUser, index: number) => {
+              return (
+                <div
+                  key={index * Math.random() + 1}
+                  id={`#${Object.keys(user)?.[0]}`}
+                 
+                >
+                  <SliderPage data={Object.values(user)?.[0]?.data} />
+                </div>
+              );
+            })}
+
           </div>
         </div>
       </div>

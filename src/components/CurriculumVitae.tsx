@@ -31,7 +31,7 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
   };
 
   return (
-    <div className="p-8 bg-white ">
+    <div className="p-8 bg-white h-full">
       <div className="mb-8">
         <a
           href="html-standard.pdf"
