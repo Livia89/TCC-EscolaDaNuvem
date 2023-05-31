@@ -66,7 +66,7 @@ function App() {
   //
   return (
     <>
-      <div className={`w-[${screenSize}px] h-full `}>
+      <div className={`w-[${screenSize}px]  bg-white`}>
         <div className="overflow-x-hidden">
           <div
             style={{
@@ -80,6 +80,7 @@ function App() {
                 <div
                   key={index * Math.random() + 1}
                   id={`#${Object.keys(user)?.[0]}`}
+                 
                 >
                   <SliderPage data={Object.values(user)?.[0]?.data} />
                 </div>
