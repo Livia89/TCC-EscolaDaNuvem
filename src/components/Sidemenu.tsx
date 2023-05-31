@@ -1,24 +1,37 @@
-// image url
-// social midias
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import liviaImage from "../assets/livia/livia.jpg";
-import { formatterUser } from "../share/interfaces";
+import { UsersActiveControls, formatterUser } from "../share/interfaces";
 import { faArrowRight, faBars } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
 interface SidemenuProps {
-  handleClickLink: (id: string) => void;
+  handleClickLink: (id:string) => void;
   users: formatterUser[];
+  setUsers: Dispatch<SetStateAction<formatterUser[]>>
 }
 
 function Sidemenu(props: SidemenuProps): React.ReactElement {
-  const { handleClickLink, users } = { ...props };
+  const { handleClickLink, users, setUsers } = { ...props };
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const isMobile = window.innerWidth;
+
   const handleClickOptMenu = (id: string) => {
     isMobile < 1024 && setOpenMenu(false)
+    setActiveUser(id);
     handleClickLink(id)
   }
+
+  const setActiveUser = (id: string) => {
+    const newArr:formatterUser[] = users?.map((user: formatterUser) => {
+      const name: string = Object.keys(user)?.[0];
+      const userD: UsersActiveControls = Object.values(user)?.[0];
+      return { [name]: { ...userD, active: (id === name && true) || false } };
+    });
+    setUsers(newArr);
+    
+  };
+
+
   return (
     <>
       <div
