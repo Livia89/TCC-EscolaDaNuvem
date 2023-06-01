@@ -1,5 +1,175 @@
 {
-  "livia": {
+ 
+  "dyogo": {
+    "name": "Dyogo",
+    "phone": "321654987",
+    "email": "liviapriscilla@hotmail.com",
+    "address": "Lisboa",
+    "image": "src/assets/dyogo/1.png",
+    "job": "",
+     "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
+    "socials": {
+      "linkedin": "lalalal",
+      "github": "lalalal",
+      "instagram": "lalalal",
+      "stackoverflow": "lalalal"
+    },
+    "workExperience": [
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      },
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      },
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      }
+    ],
+    "education": [
+      {
+        "date": "02/2019 - 20/2021",
+        "name": "lalalal",
+        "location": "lalalal",
+        "level": "lalalal"
+      },
+      {
+        "date": "02/2019 - 20/2021",
+        "name": "lalalal",
+        "location": "lalalal",
+        "level": "lalalal"
+      }
+    ],
+     "skills": [
+      "HTML5",
+      "CSS3",
+      "Javascript",
+      "Vite",
+      "Next.js",
+      "GraphQL",
+      "Strapi.js ",
+      "Figma",
+      "React",
+      "PHP",
+      "MySQL",
+      "Typescript",
+      "Bootstrap",
+      "TailwindCss",
+      "Materialize",
+      "Laravel",
+      "Blockchain",
+      "Terra.js",
+      "AMP - Accelerated Mobile Pages",
+      "Google API",
+      "Google Webmaster Tools",
+      "Google Tag Manager",
+      "Cloud",
+      "Laragon",
+      "Docker",
+      ".NET",
+      "ASP.NET",
+      "Cpanel",
+      "Plesk",
+      "Python",
+      "C/C++",
+      "Oracle",
+      "Sistemas de Redes Locais",
+      "Administração de Base de Dados para Programadores",
+      "SQL Server",
+      "WebServices",
+      "MVC"
+    ]
+  },
+  "humberto": {
+    "name": "Humberto",
+    "phone": "321654987",
+    "email": "liviapriscilla@hotmail.com",
+    "address": "Lisboa",
+    "job": "lalalal",
+    "image": "src/assets/humberto/2.png",
+     "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
+    "socials": {
+      "linkedin": "lalalal",
+      "github": "lalalal",
+      "instagram": "lalalal",
+      "stackoverflow": "lalalal"
+    },
+    "workExperience": [
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      },
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      },
+      {
+        "company": "lalalal",
+        "date": "02/2019 - 20/2021",
+        "location": "lalalal"
+      }
+    ],
+    "education": [
+      {
+        "date": "02/2019 - 20/2021",
+        "name": "lalalal",
+        "location": "lalalal",
+        "level": "lalalal"
+      },
+      {
+        "date": "02/2019 - 20/2021",
+        "name": "lalalal",
+        "location": "lalalal",
+        "level": "lalalal"
+      }
+    ],
+     "skills": [
+      "HTML5",
+      "CSS3",
+      "Javascript",
+      "Vite",
+      "Next.js",
+      "GraphQL",
+      "Strapi.js ",
+      "Figma",
+      "React",
+      "PHP",
+      "MySQL",
+      "Typescript",
+      "Bootstrap",
+      "TailwindCss",
+      "Materialize",
+      "Laravel",
+      "Blockchain",
+      "Terra.js",
+      "AMP - Accelerated Mobile Pages",
+      "Google API",
+      "Google Webmaster Tools",
+      "Google Tag Manager",
+      "Cloud",
+      "Laragon",
+      "Docker",
+      ".NET",
+      "ASP.NET",
+      "Cpanel",
+      "Plesk",
+      "Python",
+      "C/C++",
+      "Oracle",
+      "Sistemas de Redes Locais",
+      "Administração de Base de Dados para Programadores",
+      "SQL Server",
+      "WebServices",
+      "MVC"
+    ]
+  }, "livia": {
     "name": "Lívia Gomes",
     "phone": "(+351) 321654987",
     "email": "liviapriscilla@hotmail.com",
@@ -97,176 +267,6 @@
     "address": "Lisboa",
     "image": "src/assets/thais/3.png",
     "job": "",
-     "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
-    "socials": {
-      "linkedin": "lalalal",
-      "github": "lalalal",
-      "instagram": "lalalal",
-      "stackoverflow": "lalalal"
-    },
-    "workExperience": [
-      {
-        "company": "lalalal",
-        "date": "02/2019 - 20/2021",
-        "location": "lalalal"
-      },
-      {
-        "company": "lalalal",
-        "date": "02/2019 - 20/2021",
-        "location": "lalalal"
-      },
-      {
-        "company": "lalalal",
-        "date": "02/2019 - 20/2021",
-        "location": "lalalal"
-      }
-    ],
-    "education": [
-      {
-        "date": "02/2019 - 20/2021",
-        "name": "lalalal",
-        "location": "lalalal",
-        "level": "lalalal"
-      },
-      {
-        "date": "02/2019 - 20/2021",
-        "name": "lalalal",
-        "location": "lalalal",
-        "level": "lalalal"
-      }
-    ],
-     "skills": [
-      "HTML5",
-      "CSS3",
-      "Javascript",
-      "Vite",
-      "Next.js",
-      "GraphQL",
-      "Strapi.js ",
-      "Figma",
-      "React",
-      "PHP",
-      "MySQL",
-      "Typescript",
-      "Bootstrap",
-      "TailwindCss",
-      "Materialize",
-      "Laravel",
-      "Blockchain",
-      "Terra.js",
-      "AMP - Accelerated Mobile Pages",
-      "Google API",
-      "Google Webmaster Tools",
-      "Google Tag Manager",
-      "Cloud",
-      "Laragon",
-      "Docker",
-      ".NET",
-      "ASP.NET",
-      "Cpanel",
-      "Plesk",
-      "Python",
-      "C/C++",
-      "Oracle",
-      "Sistemas de Redes Locais",
-      "Administração de Base de Dados para Programadores",
-      "SQL Server",
-      "WebServices",
-      "MVC"
-    ]
-  },
-  "dyogo": {
-    "name": "Dyogo",
-    "phone": "321654987",
-    "email": "liviapriscilla@hotmail.com",
-    "address": "Lisboa",
-    "image": "src/assets/dyogo/1.png",
-    "job": "",
-     "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
-    "socials": {
-      "linkedin": "lalalal",
-      "github": "lalalal",
-      "instagram": "lalalal",
-      "stackoverflow": "lalalal"
-    },
-    "workExperience": [
-      {
-        "company": "lalalal",
-        "date": "02/2019 - 20/2021",
-        "location": "lalalal"
-      },
-      {
-        "company": "lalalal",
-        "date": "02/2019 - 20/2021",
-        "location": "lalalal"
-      },
-      {
-        "company": "lalalal",
-        "date": "02/2019 - 20/2021",
-        "location": "lalalal"
-      }
-    ],
-    "education": [
-      {
-        "date": "02/2019 - 20/2021",
-        "name": "lalalal",
-        "location": "lalalal",
-        "level": "lalalal"
-      },
-      {
-        "date": "02/2019 - 20/2021",
-        "name": "lalalal",
-        "location": "lalalal",
-        "level": "lalalal"
-      }
-    ],
-     "skills": [
-      "HTML5",
-      "CSS3",
-      "Javascript",
-      "Vite",
-      "Next.js",
-      "GraphQL",
-      "Strapi.js ",
-      "Figma",
-      "React",
-      "PHP",
-      "MySQL",
-      "Typescript",
-      "Bootstrap",
-      "TailwindCss",
-      "Materialize",
-      "Laravel",
-      "Blockchain",
-      "Terra.js",
-      "AMP - Accelerated Mobile Pages",
-      "Google API",
-      "Google Webmaster Tools",
-      "Google Tag Manager",
-      "Cloud",
-      "Laragon",
-      "Docker",
-      ".NET",
-      "ASP.NET",
-      "Cpanel",
-      "Plesk",
-      "Python",
-      "C/C++",
-      "Oracle",
-      "Sistemas de Redes Locais",
-      "Administração de Base de Dados para Programadores",
-      "SQL Server",
-      "WebServices",
-      "MVC"
-    ]
-  },
-  "humberto": {
-    "name": "Humberto",
-    "phone": "321654987",
-    "email": "liviapriscilla@hotmail.com",
-    "address": "Lisboa",
-    "job": "lalalal",
-    "image": "src/assets/humberto/2.png",
      "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
     "socials": {
       "linkedin": "lalalal",
