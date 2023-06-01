@@ -12,11 +12,9 @@ interface HomepageProps {
 export const Homepage = ({ data, handleClick }: HomepageProps) => {
   return (
     <>
-      <main
-        className={`flex flex-col items-center justify-between gradient-home lg:space-y-12 space-y-4  bg-white z-10 relative`}
-      >
-        <div className="md:grid md:grid-cols-2 md:space-x-4 w-full items-center justify-center md:mx-6 md:h-3/6   p-4 shadow">
-          <div className="text-center order-2 sm:order-1 relative mb-8 sm:mb-0">
+      <main className={`flex flex-col items-center justify-between gradient-home space-y-4 lg:space-y-12 bg-white z-10 relative`}>
+        <div className="md:grid md:grid-cols-2 flex flex-col-reverse md:space-x-4 w-full items-center justify-center md:mx-6 md:h-3/6   p-4 shadow">
+          <div className="text-center relative mb-8 sm:mb-0">
             <h1 className="font-bold  ">
               <span className="text-[#ff9900] animate-pulse"> AWS - </span>
               Amazon Web Services
@@ -37,7 +35,7 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
             </div>
           </div>
 
-          <div className="-top-2 order-1 mb-8 sm:mb-0 sm:order-2 sm:-top-0">
+          <div className="-top-2 mb-8 sm:mb-0 sm:-top-0">
             <img
               className="img-fluid mx-auto rounded p-6"
               width={700}
@@ -59,7 +57,7 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
                     className="md:flex md:space-x-4 max-w-screen-lg m-auto"
                     key={index + Math.random() * 0.1}
                   >
-                    <div className="block max-w-sm p-6 space-y-2 bg-white rounded-lg  m-auto scale-[0.95] hover:scale-[1] cursor-pointer transition-all">
+                    <div className="block max-w-sm p-6 space-y-2 bg-white rounded-lg  m-auto scale-[0.95] hover:scale-[1] transition-all">
                       <img
                         width="200"
                         height="80"
