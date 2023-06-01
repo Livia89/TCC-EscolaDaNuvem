@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import liviaImage from "../assets/livia/livia.jpg";
 import { UsersActiveControls, formatterUser } from "../share/interfaces";
 import { faArrowRight, faBars, faHome } from "@fortawesome/free-solid-svg-icons";
 import { Dispatch, SetStateAction, useState } from "react";
@@ -58,7 +57,7 @@ function Sidemenu(props: SidemenuProps): React.ReactElement {
           onClick={() => handleClickOptMenu(name)}
         >
             <img
-              src={liviaImage}
+              src={image}
               className={`rounded-full transition-all shadow mx-auto ${
                 userValues.active &&
                 " border-2 border-white opacity-50"
