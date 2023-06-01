@@ -13,7 +13,7 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
   return (
     <>
       <main
-        className={`flex flex-col items-center justify-between gradient-home space-y-4  bg-white z-10 relative`}
+        className={`flex flex-col items-center justify-between gradient-home space-y-4 lg:space-y-12 bg-white z-10 relative`}
       >
         <div className="md:grid md:grid-cols-2 flex flex-col-reverse md:space-x-4 w-full items-center justify-center md:mx-6 md:h-3/6   p-4 shadow">
           <div className="text-center relative mb-8 sm:mb-0">
@@ -74,6 +74,17 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
                 );
               })}
           </div>
+          <div className="flex justify-center">    
+                <button
+                id='verCurriculum'
+                  className={`ease-in-out transition-all  rounded  py-4 px-6 text-white flex justify-center items-center bg-[#ff9900]`}
+                  onClick={() => handleClick("curriculum")}
+                >
+                  Ver Curriculum Vitae
+                </button>
+            
+            </div>
+          
         </div>
      
         <section className=" w-full bg-[#f2f2f2] ">
