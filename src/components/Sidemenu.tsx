@@ -57,7 +57,7 @@ function Sidemenu(props: SidemenuProps): React.ReactElement {
           onClick={() => handleClickOptMenu(name)}
         >
             <img
-              src={image}
+              src={userValues.data.image}
               className={`rounded-full transition-all shadow mx-auto ${
                 userValues.active &&
                 " border-2 border-white opacity-50"
