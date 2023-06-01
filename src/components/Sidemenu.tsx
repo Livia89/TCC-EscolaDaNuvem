@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import liviaImage from "../assets/livia/livia.jpg";
 import { UsersActiveControls, formatterUser } from "../share/interfaces";
 import { faArrowRight, faBars, faHome } from "@fortawesome/free-solid-svg-icons";
 import { Dispatch, SetStateAction, useState } from "react";
