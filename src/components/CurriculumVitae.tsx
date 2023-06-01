@@ -61,7 +61,7 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
         </div>
         <div className="xl:px-20 space-y-16">
           <div>
-            <Title title="About" color="#8ea69b" />
+            <Title title="Sobre" color="#8ea69b" />
             Cursei o nível 4 em Programação e nível 5 em Técnico Especialista em
             Programação e Sistemas de Informação. Conheci o serviço de cloud, o
             que me despertou muito interesse em aprender a implementar soluções
@@ -70,7 +70,7 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
           </div>
 
           <div>
-            <Title title="Work Experience" color="#8ea69b" />
+            <Title title="Experiência" color="#8ea69b" />
             {workExperience.map((each: WorkExperience, index: number) => (
               <div
                 className="flex flex-col space-y-2 my-4"
@@ -86,7 +86,7 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
             ))}
           </div>
           <div>
-            <Title title="Education" color="#8ea69b" />
+            <Title title="Educação" color="#8ea69b" />
             {education.map((each: Education, index: number) => (
               <div
                 className="flex flex-col space-y-2 my-4"
@@ -102,11 +102,11 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
             ))}
           </div>
           <div>
-            <Title title="Skills & Expertise" color="#8ea69b" />
+            <Title title="Habilidades e Especialidades" color="#8ea69b" />
             <div className="flex-wrap">
               {skills.map((skill, index: number) => (
                 <div className="inline-block" key={index * Math.random() + 1}>
-                  <span className="text-sm ">{skill}</span>{" "}
+                  <span className="text-sm ">{skill}</span>
                   {index !== skills.length - 1 && (
                     <span className="mx-2">•</span>
                   )}
