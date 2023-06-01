@@ -1,7 +1,5 @@
-// image url
-// social midias
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import liviaImage from "../assets/livia/livia.jpg";
+
 
 import {
   faLinkedin,
@@ -20,7 +18,7 @@ interface SectionImageProps {
   
 }
 function ImageSection(props: SectionImageProps): React.ReactElement {
-  const { socials } = { ...props };
+  const { socials, image } = { ...props };
 
   return (
     <div className={`p-8 flex flex-col items-center lg:h-full`}>
@@ -29,7 +27,7 @@ function ImageSection(props: SectionImageProps): React.ReactElement {
       >
         
           <img
-            src={liviaImage}
+            src={image}
             className={`rounded lg:mt-28 shadow`}
             height={300}
             width={300}
