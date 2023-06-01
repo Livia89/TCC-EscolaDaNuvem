@@ -4,7 +4,7 @@
     "phone": "(+351) 321654987",
     "email": "liviapriscilla@hotmail.com",
     "address": "Lisboa",
-    "image": "assets/livia.jpg",
+    "image": "src/assets/livia/livia.jpg",
     "job": "Front End Developer",
      "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
 
@@ -95,7 +95,7 @@
     "phone": "321654987",
     "email": "thais@hotmail.com",
     "address": "Lisboa",
-    "image": "",
+    "image": "src/assets/livia/livia.jpg",
     "job": "",
      "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
     "socials": {
@@ -180,7 +180,7 @@
     "phone": "321654987",
     "email": "liviapriscilla@hotmail.com",
     "address": "Lisboa",
-    "image": "",
+    "image": "src/assets/livia/livia.jpg",
     "job": "",
      "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
     "socials": {
@@ -265,8 +265,8 @@
     "phone": "321654987",
     "email": "liviapriscilla@hotmail.com",
     "address": "Lisboa",
-    "image": "lalalal",
     "job": "lalalal",
+    "image": "src/assets/livia/livia.jpg",
      "cvPath": "src/assets/livia/CV-Livia.Gomes.pdf",
     "socials": {
       "linkedin": "lalalal",
