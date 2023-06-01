@@ -116,7 +116,6 @@ function App() {
             handleClickHomepage={handleOnclickGoSection}
           />
         </div>
-
         <Footer />
       </div>
     </>
