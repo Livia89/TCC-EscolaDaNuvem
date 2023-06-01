@@ -12,9 +12,7 @@ interface HomepageProps {
 export const Homepage = ({ data, handleClick }: HomepageProps) => {
   return (
     <>
-      <main
-        className={`flex flex-col items-center justify-between gradient-home space-y-4 lg:space-y-12 bg-white z-10 relative`}
-      >
+      <main className={`flex flex-col items-center justify-between gradient-home space-y-4 lg:space-y-12 bg-white z-10 relative`}>
         <div className="md:grid md:grid-cols-2 flex flex-col-reverse md:space-x-4 w-full items-center justify-center md:mx-6 md:h-3/6   p-4 shadow">
           <div className="text-center relative mb-8 sm:mb-0">
             <h1 className="font-bold  ">
@@ -73,6 +71,7 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
                   </div>
                 );
               })}
+              
           </div>
           <div className="flex justify-center">    
                 <button
