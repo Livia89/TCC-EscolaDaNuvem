@@ -79,7 +79,7 @@ function App() {
 
   return (
     <>
-      <div className="">
+      
         <div id="homepage" className={` transition-all ${!selectedSection.homepage && showSection && " hidden "}`}>
           <Homepage handleClick={handleOnclickGoSection} data={users} />
         </div>
@@ -117,7 +117,7 @@ function App() {
           />
         </div>
         <Footer />
-      </div>
+      
     </>
   );
 }
