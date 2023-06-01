@@ -38,6 +38,7 @@ email: string;
 address: string;
 job: string;
 cvPath: string; 
+image: string;
 socials: Socials;
 workExperience: WorkExperience[]; 
 education: Education[];

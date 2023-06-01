@@ -19,6 +19,7 @@ function SliderPage(props: sidemenuProps): React.ReactElement {
           {...{
             id: data.name,
             socials: data.socials,
+            image: data.image,
           }}
         />
       </div>

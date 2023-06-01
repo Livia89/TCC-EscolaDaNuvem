@@ -15,7 +15,9 @@ import { SocialName } from "../share/enums";
 
 interface SectionImageProps {
   id: string;
+  image:  string;
   socials: Socials;
+  
 }
 function ImageSection(props: SectionImageProps): React.ReactElement {
   const { socials } = { ...props };
@@ -28,7 +30,7 @@ function ImageSection(props: SectionImageProps): React.ReactElement {
         
           <img
             src={liviaImage}
-            className={`rounded-full lg:mt-28 shadow  `}
+            className={`rounded lg:mt-28 shadow`}
             height={300}
             width={300}
           />
@@ -40,7 +42,7 @@ function ImageSection(props: SectionImageProps): React.ReactElement {
                   socialName.length && (
                     <a href={socialLink} key={index * Math.random() + 1}>
                       <FontAwesomeIcon
-                        className="bg-white p-2 rounded-full"
+                        className="bg-white p-2 hover:bg-gray-300 transition-all ease-in-out rounded"
                         size={"lg"}
                         icon={
                           (socialName === SocialName.github && faGithub) ||

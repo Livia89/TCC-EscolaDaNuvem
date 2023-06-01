@@ -1,17 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import liviaImage from "../assets/livia/livia.jpg";
 import { UsersActiveControls, formatterUser } from "../share/interfaces";
-import { faArrowRight, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faBars, faHome } from "@fortawesome/free-solid-svg-icons";
 import { Dispatch, SetStateAction, useState } from "react";
 
 interface SidemenuProps {
   handleClickLink: (id:string) => void;
   users: formatterUser[];
   setUsers: Dispatch<SetStateAction<formatterUser[]>>
+  handleClickHomepage: (name: string) => void
 }
 
 function Sidemenu(props: SidemenuProps): React.ReactElement {
-  const { handleClickLink, users, setUsers } = { ...props };
+  const { handleClickLink, users, setUsers, handleClickHomepage } = { ...props };
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const isMobile = window.innerWidth;
 
@@ -30,8 +31,6 @@ function Sidemenu(props: SidemenuProps): React.ReactElement {
     setUsers(newArr);
     
   };
-
-
   return (
     <>
       <div
@@ -40,19 +39,20 @@ function Sidemenu(props: SidemenuProps): React.ReactElement {
         }   transition-transform `}
       >
         <div
-          className="relative top-0 -right-5 cursor-pointer"
+          className="relative top-0 -right-5 cursor-pointer "
           onClick={() => setOpenMenu(false)}
         >
           <span className="text-white text-sm">
             <FontAwesomeIcon icon={faArrowRight} color="white" size={"2xl"} />
           </span>
         </div>
-        {users?.map((user: formatterUser, index: number) => {
+      <div className="h-full">
+      {users?.map((user: formatterUser, index: number) => {
           const name:string = Object.keys(user)?.[0];
           const userValues:UsersActiveControls = Object.values(user)?.[0];
           return   <div
           key={index * Math.random() + 1}
-          className={`  ${
+          className={` my-6 ${
             userValues.active && " pointer-events-none " || "cursor-pointer"
           }`}
           onClick={() => handleClickOptMenu(name)}
@@ -71,6 +71,8 @@ function Sidemenu(props: SidemenuProps): React.ReactElement {
             </span>
         </div>
         })}
+      </div>
+        
         {!openMenu && (
           <div
             className="fixed top-3 right-32 cursor-pointer shadow-xl "
@@ -81,6 +83,10 @@ function Sidemenu(props: SidemenuProps): React.ReactElement {
             </span>
           </div>
         )}
+        <div onClick={() => handleClickHomepage("homepage")} className="text-white flex flex-col items-center space-y-1 cursor-pointer">
+          <FontAwesomeIcon size="xl" icon={faHome}/>
+          <span className="text-sm">Home</span>
+        </div>
       </div>
     </>
   );
