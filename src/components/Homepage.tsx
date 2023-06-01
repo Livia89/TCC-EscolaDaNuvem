@@ -15,7 +15,7 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
       <main
         className={`flex flex-col items-center justify-between gradient-home space-y-4  bg-white z-10 relative`}
       >
-        <div className="grid sm:grid-cols-2 sm:space-x-4 w-full items-center justify-center sm:mx-6 sm:h-3/6  sm:p-0 p-4 shadow">
+        <div className="md:grid md:grid-cols-2 md:space-x-4 w-full items-center justify-center md:mx-6 md:h-3/6   p-4 shadow">
           <div className="text-center order-2 sm:order-1 relative mb-8 sm:mb-0">
             <h1 className="font-bold  ">
               <span className="text-[#ff9900] animate-pulse"> AWS - </span>
@@ -79,7 +79,7 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
         <section className=" w-full bg-[#f2f2f2] ">
         <h2 className="p-4 bg-[#005276] w-full text-center text-white font-cormorant  text-3xl">As Vantanges da Nuvem</h2>
 
-          <div className="grid grid-cols-2 items-center px-4">
+          <div className="lg:grid grid-cols-2 items-center px-4">
 
         <img
             className="img-fluid rounded p-6 mx-auto"
@@ -88,13 +88,13 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
             src={cloudComputing}
             />
         
-        <div className="text-[25px] font-extralight ">
-        <div className="space-x-4 flex items-center"><FontAwesomeIcon size="sm" icon={faHandHoldingDollar}/><span> Pagamento conforme o uso</span></div>
-        <div className="space-x-4 flex items-center"><FontAwesomeIcon size="sm" icon={faPeopleRoof}/><span>Beneficiar-se de economia massiva de escala</span></div>
-        <div className="space-x-4 flex items-center"><FontAwesomeIcon size="sm" icon={faGaugeHigh}/><span>Aumentar a velocidade e a agilidade</span></div>
-        <div className="space-x-4 flex items-center"><FontAwesomeIcon size="sm" icon={faCubesStacked}/><span>Parar de adivinhar a capacidade</span></div>
-        <div className="space-x-4 flex items-center"><FontAwesomeIcon size="sm" icon={faGlobe}/><span>Obtenha alcance global em minutos</span></div>
-        <div className="space-x-4 flex items-center"><FontAwesomeIcon size="sm" icon={faPiggyBank}/><span>Realize economia de custos</span></div>
+        <div className="xl:text-[25px] font-extralight xl:p-0 p-6 sm:text-[20px]">
+        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" icon={faHandHoldingDollar}/><span> Pagamento conforme o uso</span></div>
+        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" icon={faPeopleRoof}/><span>Beneficiar-se de economia massiva de escala</span></div>
+        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" icon={faGaugeHigh}/><span>Aumentar a velocidade e a agilidade</span></div>
+        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" icon={faCubesStacked}/><span>Parar de adivinhar a capacidade</span></div>
+        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" icon={faGlobe}/><span>Obtenha alcance global em minutos</span></div>
+        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" icon={faPiggyBank}/><span>Realize economia de custos</span></div>
         </div>
             </div>
         </section>
