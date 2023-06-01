@@ -16,11 +16,11 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
         <div className="md:grid md:grid-cols-2 flex flex-col-reverse md:space-x-4 w-full items-center justify-center md:mx-6 md:h-3/6   p-4 shadow">
           <div className="text-center relative mb-8 sm:mb-0">
             <h1 className="font-bold  ">
-              <span className="text-[#ff9900] animate-pulse"> AWS - </span>
+              <span className="text-[#ff9900] animate-pulse font-extrabold"> AWS - </span>
               Amazon Web Services
             </h1>
             <p className=" text-3xl font-cormorant uppercase font-semibold tracking-widest z-50 relative">Escola da Nuvem </p>
-            <p className="mt-4 mb-5">
+            <p className="mt-4 mb-5 font-[17px]">
               Trabalho de conclusão de curso e apresentação de Curriculum Vitae
             </p>
             <div className="flex justify-center">    
@@ -64,7 +64,7 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
                         className="rounded-full m-auto shadow-inner  "
                         src={`${userValues.data.image}`}
                       />
-                      <h5 className="mb-2 text-xl font-cormorant font-medium text-center tracking-tight text-gray-900 dark:text-white">
+                      <h5 className="mb-2 text-center tracking-tight text-gray-900 dark:text-white">
                         {`${userValues.data.name}`}
                       </h5>
                     </div>
@@ -99,12 +99,12 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
             />
         
         <div className="xl:text-[25px] font-extralight xl:p-0 p-6 sm:text-[20px]">
-        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" icon={faHandHoldingDollar}/><span> Pagamento conforme o uso</span></div>
-        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" icon={faPeopleRoof}/><span>Beneficiar-se de economia massiva de escala</span></div>
-        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" icon={faGaugeHigh}/><span>Aumentar a velocidade e a agilidade</span></div>
-        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" icon={faCubesStacked}/><span>Parar de adivinhar a capacidade</span></div>
-        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" icon={faGlobe}/><span>Obtenha alcance global em minutos</span></div>
-        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" icon={faPiggyBank}/><span>Realize economia de custos</span></div>
+        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" color="#9c1620" icon={faHandHoldingDollar}/><span> Pagamento conforme o uso</span></div>
+        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" color="#9c1620" icon={faPeopleRoof}/><span>Beneficiar-se de economia massiva de escala</span></div>
+        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" color="#9c1620" icon={faGaugeHigh}/><span>Aumentar a velocidade e a agilidade</span></div>
+        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" color="#9c1620" icon={faCubesStacked}/><span>Parar de adivinhar a capacidade</span></div>
+        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" color="#9c1620" icon={faGlobe}/><span>Obtenha alcance global em minutos</span></div>
+        <div className="space-x-4 flex items-center justify-center lg:justify-normal"><FontAwesomeIcon size="sm" color="#9c1620" icon={faPiggyBank}/><span>Realize economia de custos</span></div>
         </div>
             </div>
         </section>
