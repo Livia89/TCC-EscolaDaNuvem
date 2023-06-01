@@ -59,7 +59,7 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
                     className="md:flex md:space-x-4 max-w-screen-lg m-auto"
                     key={index + Math.random() * 0.1}
                   >
-                    <div className="block max-w-sm p-6 space-y-2 bg-white rounded-lg  m-auto scale-[0.95] hover:scale-[1] cursor-pointer transition-all">
+                    <div className="block max-w-sm p-6 space-y-2 bg-white rounded-lg  m-auto scale-[0.95] hover:scale-[1] transition-all">
                       <img
                         width="200"
                         height="80"
