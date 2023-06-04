@@ -1,4 +1,4 @@
-import { Education, UsersData, WorkExperience } from "../share/interfaces";
+import { Certification, Education, UsersData, WorkExperience } from "../share/interfaces";
 import Title from "./SectionTitle";
 interface CVProps {
   data: UsersData;
@@ -12,6 +12,7 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
     address,
     cvPath,
     about,
+    certification, 
     education,
     workExperience,
     skills,
@@ -22,9 +23,10 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
   return (
     <div className="p-8 bg-white h-full">
       <div className="mb-8">
+
         <a
-          href="html-standard.pdf"
-          download={cvPath}
+          href={cvPath}
+          target="_blank"
           className="bg-[#140707] hover:bg-gray-100 hover:shadow hover:text-[#140707] text-white px-6 py-3 transition-colors ease "
         >
           Download CV
@@ -65,8 +67,9 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
                   <b className="text-sm">{each.date}</b>
                   <b className="text-[15px]">{each.company}</b>
                 </div>
-                <span className="">{job}</span>
-                <span className="">{each.location}</span>
+                <span>{each.occupation}</span>
+                <span className="text-sm">{each.location}</span>
+                
               </div>
             ))}
           </div>
@@ -83,6 +86,21 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
                 </div>
                 <span className="">{each.level}</span>
                 <span className="text-sm">{each.location}</span>
+              </div>
+            ))}
+          </div>
+          <div>
+            <Title title="Cursos e Certificações" color="#8ea69b" />
+            {certification.map((cert: Certification, index: number) => (
+              <div
+                className="flex flex-col space-y-2 my-4"
+                key={index * Math.random() + 1}
+              >
+                <div className="flex flex-col">
+                  <b className="text-[15px]">{cert.name}</b>
+                <span className="text-sm">{cert.location}</span>
+                </div>
+                
               </div>
             ))}
           </div>
