@@ -33,7 +33,7 @@ function Sidemenu(props: SidemenuProps): React.ReactElement {
   return (
     <>
       <div
-        className={`flex flex-col px-2 space-y-4 border-l-2  bg-slate-950 py-4 text-center fixed bottom-0 right-0 top-0 transform ${
+        className={`flex flex-col px-4 space-y-4 border-l-2  bg-slate-950 py-4 text-center fixed bottom-0 right-0 top-0 transform ${
           !openMenu && " translate-x-full "
         }   transition-transform `}
       >
@@ -74,7 +74,7 @@ function Sidemenu(props: SidemenuProps): React.ReactElement {
         
         {!openMenu && (
           <div
-            className="fixed top-3 right-32 cursor-pointer shadow-xl "
+            className="fixed top-3 right-28 cursor-pointer shadow-xl "
             onClick={() => setOpenMenu(true)}
           >
             <span className="text-black text-sm bg-white p-3 rounded border border-[#96a69b]">

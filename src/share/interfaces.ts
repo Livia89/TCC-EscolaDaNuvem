@@ -20,6 +20,7 @@ export interface Socials {
 export interface WorkExperience {
   company: string; 
   date: string;
+  occupation: string;
   location: string;
   
 }
@@ -29,6 +30,11 @@ export interface Education {
   name: string;
   location: string;
   level: string;
+}
+
+export interface Certification {
+  name: string;
+  location: string;
 }
 
 export interface UsersData {
@@ -41,7 +47,8 @@ cvPath: string;
 image: string;
 about: string;
 socials: Socials;
-workExperience: WorkExperience[]; 
+certification: Certification[]; 
+workExperience: WorkExperience[];  
 education: Education[];
 skills: string[];
 }
