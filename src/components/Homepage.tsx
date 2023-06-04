@@ -59,8 +59,8 @@ export const Homepage = ({ data, handleClick }: HomepageProps) => {
                   >
                     <div className="block max-w-sm p-6 space-y-2 bg-white rounded-lg  m-auto scale-[0.95] hover:scale-[1] transition-all">
                       <img
-                        width="200"
-                        height="80"
+                        width="250"
+                        height="100"
                         className="rounded-full m-auto shadow-inner  "
                         src={`${userValues.data.image}`}
                       />
