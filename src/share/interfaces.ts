@@ -39,6 +39,7 @@ address: string;
 job: string;
 cvPath: string; 
 image: string;
+about: string;
 socials: Socials;
 workExperience: WorkExperience[]; 
 education: Education[];

@@ -1,15 +1,3 @@
-/*
-name: 
-Profession
-Dados Pessoais: 
-About
-
-SKILLS & EXPERTISE
-word experience 
-Education
-Contacts 
-*/
-
 import { Education, UsersData, WorkExperience } from "../share/interfaces";
 import Title from "./SectionTitle";
 interface CVProps {
@@ -23,6 +11,7 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
     email,
     address,
     cvPath,
+    about,
     education,
     workExperience,
     skills,
@@ -61,12 +50,8 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
         </div>
         <div className="xl:px-20 space-y-16">
           <div>
-            <Title title="Sobre" color="#8ea69b" />
-            Cursei o nível 4 em Programação e nível 5 em Técnico Especialista em
-            Programação e Sistemas de Informação. Conheci o serviço de cloud, o
-            que me despertou muito interesse em aprender a implementar soluções
-            de baixo custo e estratégias de migração de aplicações. Para isso
-            almejo uma oportunidade para atuar na área de TI, com foco em Cloud.
+            <Title title="About" color="#8ea69b" />
+            {about}
           </div>
 
           <div>
