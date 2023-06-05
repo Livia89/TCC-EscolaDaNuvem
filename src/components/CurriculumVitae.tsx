@@ -119,7 +119,9 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
           </div>
         </div>
       </div>
+    
     </div>
+    
   );
 }
 export default CurriculumVitae;
