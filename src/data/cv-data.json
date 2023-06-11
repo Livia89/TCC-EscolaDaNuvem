@@ -14,20 +14,20 @@
     "workExperience": [
       {
         "company": "Razzo",
-        "date": "05/2022 - 01/2023",
+      
         "occupation": "Auxiliar de Suporte de TI (aprendiz)",
         "location": "São Paulo"
       }
     ],
     "education": [
       {
-        "date": "02/2022 - 06/2023",
+     
         "name": "ETEC - Informatica para Internet",
         "location": "São Paulo",
         "level": "Curso técnico"
       },
       {
-        "date": "06/2022 - 06/2023",
+     
         "name": "FAM - Segurança da Informação",
         "location": "São Paulo",
         "level": "Tecnólogo"
@@ -90,39 +90,38 @@
     },
     "workExperience": [
       {
-        "company": "Momentum One (Freelancer)",
-        "date": "03/2021 - presente",
+        "company": "Momentum One",
         "occupation": "Front End Developer",
         "location": "Lisboa"
       },
       {
         "company": "Lusodados",
-        "date": "02/2018 - 03/2021",
+      
         "occupation": "Marketing Digital & Full-Stack Developer",
         "location": "Lisboa"
       },
       {
         "company": "Gold Excursões",
-        "date": "03/2017 - 02/2021",
+       
         "occupation": "Analista Marketing Digital",
         "location": "Lisboa"
       }
     ],
     "education": [
       {
-        "date": "09/2021 - Cursando",
+      
         "name": "Universidade Autonôma de Lisboa",
         "location": "Lisboa",
         "level": "Engenharia Informática - Licenciatura"
       },
       {
-        "date": "03/2018 - 04/2019",
+      
         "name": "Técnico/a Especialista em Tecnologias e Programação de Sistemas de Informação",
         "location": "Lisboa",
         "level": "Nível 5"
       },
       {
-        "date": "03/2018 - 04/2019",
+        
         "name": "Programação Informática",
         "location": "Lisboa",
         "level": "Nível 4"
@@ -201,26 +200,26 @@
     "workExperience": [
       {
         "company": "Prefeitura Municipal de Maracaí",
-        "date": "06/2015 - 12/2015",
+       
         "occupation": "Estagiária",
         "location": "Maracaí-SP"
       }
     ],
     "education": [
       {
-        "date": "03/2023",
+        
         "name": "MBA em Ciência de Dados",
         "location": "XP Educação – EaD",
         "level": "São Paulo"
       },
       {
-        "date": "02/2019 - 20/2021",
+       
         "name": "Pós-Graduação em Estatística Aplicada",
         "location": "Anhanguera Uniderp – EaD",
         "level": "São Paulo"
       },
       {
-        "date": "02/2019 - 20/2021",
+       
         "name": "Bacharel em Engenharia Civil",
         "location": "UNIP - Assis-SP",
         "level": "São Paulo"

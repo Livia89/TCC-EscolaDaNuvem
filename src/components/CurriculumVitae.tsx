@@ -25,7 +25,7 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
       <div className="mb-8">
 
         <a
-          href={cvPath}
+          href={'#'}
           target="_blank"
           className="bg-[#140707] hover:bg-gray-100 hover:shadow hover:text-[#140707] text-white px-6 py-3 transition-colors ease "
         >
@@ -64,7 +64,7 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
                 key={index * Math.random() + 1}
               >
                 <div className="flex flex-col">
-                  <b className="text-sm">{each.date}</b>
+                  {/* <b className="text-sm">{each.date}</b> */}
                   <b className="text-[15px]">{each.company}</b>
                 </div>
                 <span>{each.occupation}</span>
@@ -81,7 +81,7 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
                 key={index * Math.random() + 1}
               >
                 <div className="flex flex-col">
-                  <b className="text-sm">{each.date}</b>
+                  {/* <b className="text-sm">{each.date}</b> */}
                   <b className="text-[15px]">{each.name}</b>
                 </div>
                 <span className="">{each.level}</span>
