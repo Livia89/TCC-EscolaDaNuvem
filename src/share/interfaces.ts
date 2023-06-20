@@ -19,14 +19,12 @@ export interface Socials {
 
 export interface WorkExperience {
   company: string; 
-  date: string;
   occupation: string;
   location: string;
   
 }
 
 export interface Education {
-  date: string;
   name: string;
   location: string;
   level: string;
