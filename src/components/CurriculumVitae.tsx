@@ -10,7 +10,6 @@ function CurriculumVitae({ data }: CVProps): React.ReactElement {
     job,
     email,
     address,
-    cvPath,
     about,
     certification, 
     education,
